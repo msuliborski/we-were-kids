@@ -6,12 +6,25 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float vel;
     [SerializeField] private float rot;
+
+    [SerializeField] public int id;
+
     private Rigidbody _rigidbody;
+
+
+
+    List<KeyCode> integers = new List<KeyCode>()
+
+	var wKey = new Dictionary<int, KeyCode>();
 
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+
+		wKey[0] = Input.GetKey(KeyCode.W);
+		wKey[0] = Input.GetKey(KeyCode.W);
+		wKey[0] = Input.GetKey(KeyCode.W);
     }
 
     // Update is called once per frame
