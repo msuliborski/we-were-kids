@@ -184,6 +184,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Bullet.cs" t="Include" />
           <e p="Flag.cs" t="Include" />
           <e p="Pathfinding" t="Include">
             <e p="Direction.cs" t="Include" />
@@ -191,6 +192,7 @@
             <e p="FieldGenerator.cs" t="Include" />
           </e>
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="Shooting.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
