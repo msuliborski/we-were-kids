@@ -9,8 +9,7 @@ public class CameraScript : MonoBehaviour
 
     [SerializeField] public GameObject player;
     private Vector3 offset; 
-    void Start()
-    {
+    void Start(){
         //player = GameObject.Find("Player"+id);
         
         offset = transform.position - player.transform.position;

@@ -10,6 +10,12 @@ public class PlayerHandler : MonoBehaviour {
     [SerializeField] private bool onIce = false;
     [SerializeField] private AudioClip ouch;
     [SerializeField] private AudioClip pickup;
+
+    public GameObject spawnPoint;
+    private bool died = false;
+    private bool doOnce = true;
+    private float cooldown = 5;
+    
     private AudioSource source;
     
     
@@ -32,7 +38,31 @@ public class PlayerHandler : MonoBehaviour {
     }
 
     // Update is called once per frame
+
     private void FixedUpdate() {
+       
+//        if (hp <= 0 && !died) {
+//            //Debug.Log("died");
+//            cooldown -= Time.deltaTime;
+//            if (doOnce) {
+//                doOnce = false;
+//                if (id == 1) FatherController.player0Score++;
+//                else FatherController.player1Score++;
+//                GetComponent<MeshRenderer>().enabled = false;
+//                GetComponent<CapsuleCollider>().isTrigger = true;
+//            }
+//
+//            if (cooldown <= 0) {
+//                died = false;
+//                hp = 100;
+//                transform.position = new Vector3(spawnPoint.transform.position.x, transform.position.y, spawnPoint.transform.position.z);
+//                cooldown = 5;
+//                GetComponent<MeshRenderer>().enabled = true;
+//                GetComponent<CapsuleCollider>().isTrigger = false;
+//                doOnce = true;
+//            }
+//        }
+//        
 
         
 
@@ -53,7 +83,9 @@ public class PlayerHandler : MonoBehaviour {
         if (rotationX < 0 || rotationX > 0 || rotationY < 0 || rotationY > 0) {
             var look = new Vector3(rotationX, 0, rotationY);
             transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(look),0.3f);
-        } 
+        } else {
+            _rigidbody.angularVelocity = Vector3.zero;
+        }
         #if UNITY_STANDALONE_WIN
         if (Input.GetAxis("FireW" + id) > 0.5) {
             if (weapon) weapon.Fire();
