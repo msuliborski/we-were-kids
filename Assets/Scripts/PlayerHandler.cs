@@ -7,15 +7,14 @@ public class PlayerHandler : MonoBehaviour {
     [SerializeField] private int id;
     [SerializeField] private float vel;
     [SerializeField] private float rot;
-    [SerializeField] private GameObject projectile;
     [SerializeField] private bool onIce = false;
 
     
     
     
     public bool holdingWeapon = false;
-    public PickUp weapon;
-
+    
+    public PickUp weapon = null;
     public PickUp grenade;
     
     private static int hp = 100;
@@ -42,7 +41,7 @@ public class PlayerHandler : MonoBehaviour {
         dir.x = Input.GetAxis("LeftVertical" + id);
         dir.z = Input.GetAxis("LeftHorizontal" + id);
         if (onIce)_rigidbody.AddForce(dir.normalized * vel);
-         else _rigidbody.velocity = dir.normalized * vel;
+        else _rigidbody.velocity = dir.normalized * vel;
 
         var rotationX = Input.GetAxis("RightHorizontal" + id);
         var rotationY = -Input.GetAxis("RightVertical" + id);
@@ -55,12 +54,10 @@ public class PlayerHandler : MonoBehaviour {
         }
 
         if (Math.Abs(Input.GetAxis("Fire" + id)) > 0.5) {
-            var parent = transform.rotation;
-            Instantiate(projectile, inst.transform.position, parent);
+            if (weapon) weapon.Fire();
         }    
 
         if (Input.GetButton("Back" + id)) {
-            if (weapon) weapon.Fire();
         }
     }
     
@@ -72,15 +69,24 @@ public class PlayerHandler : MonoBehaviour {
             Destroy (collision.gameObject);
             hp -= 10;
         }
-      }
+        if(collision.gameObject.CompareTag("Weapon")){
+            PickUp rifleScript = collision.gameObject.GetComponent<PickUp>();
+            if(!rifleScript.isPickedUp) {
+                if (weapon != null) Destroy(weapon.gameObject);
+                rifleScript.owner = gameObject;
+                weapon = rifleScript;
+                holdingWeapon = true;
+                rifleScript.isPickedUp = true;
+                //Destroy(gameObject);
+            }
+        }
+    }
     
     
     void OnTriggerEnter (Collider col) {
-                       if (col.gameObject.CompareTag("Ice"))
-                       {
-                           onIce = true;
-                       }
-                   }
+        if (col.gameObject.CompareTag("Ice"))
+            onIce = true;
+    }
     
     void OnTriggerExit (Collider col) {
         if (col.gameObject.CompareTag("Ice"))

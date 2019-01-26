@@ -6,7 +6,10 @@ TagManager:
   tags:
   - Pickable
   - Bullet
-  - Ice
+  - Rifle
+  - Pistol
+  - Shotgun
+  - Weapon
   layers:
   - Default
   - TransparentFX
