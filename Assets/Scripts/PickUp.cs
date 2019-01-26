@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Assertions.Must;
 
 
-public class PickUp : MonoBehaviour
+public abstract class PickUp : MonoBehaviour
 {
     public bool isPickedUp = false;
     public GameObject owner;
@@ -35,6 +35,8 @@ public class PickUp : MonoBehaviour
             }
         }
     }
+
+    public abstract void Fire();
     
     
 }

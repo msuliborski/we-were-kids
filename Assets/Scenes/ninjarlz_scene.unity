@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.41679946, g: 0.4443421, b: 0.4598019, a: 1}
+  m_IndirectSpecularColor: {r: 0.41679972, g: 0.44434232, b: 0.4598021, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -150,7 +150,9 @@ MonoBehaviour:
   rot: 0
   projectile: {fileID: 8709905363783251462, guid: 4f631f579af9121c7b396132e33f2c59,
     type: 3}
+  onIce: 0
   holdingWeapon: 0
+  weapon: {fileID: 0}
 --- !u!136 &256058685
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -158,7 +160,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256058683}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: cd6cebe7a7824944f89ac0f3a2b05f4e, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
@@ -1537,7 +1539,9 @@ MonoBehaviour:
   rot: 0
   projectile: {fileID: 8709905363783251462, guid: 4f631f579af9121c7b396132e33f2c59,
     type: 3}
+  onIce: 0
   holdingWeapon: 0
+  weapon: {fileID: 0}
 --- !u!136 &2058842808
 CapsuleCollider:
   m_ObjectHideFlags: 0

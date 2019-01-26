@@ -8,9 +8,15 @@ public class PlayerHandler : MonoBehaviour {
     [SerializeField] private float vel;
     [SerializeField] private float rot;
     [SerializeField] private GameObject projectile;
+    [SerializeField] private bool onIce = false;
 
+    
+    
+    
     public bool holdingWeapon = false;
-    public GameObject weapon;
+    public PickUp weapon;
+
+    public PickUp grenade;
     
     private static int hp = 100;
 
@@ -35,8 +41,8 @@ public class PlayerHandler : MonoBehaviour {
         var dir = Vector3.zero;
         dir.x = Input.GetAxis("LeftVertical" + id);
         dir.z = Input.GetAxis("LeftHorizontal" + id);
-        _rigidbody.AddForce(dir.normalized * vel);
-        // _rigidbody.velocity = dir.normalized * vel;
+        if (onIce)_rigidbody.AddForce(dir.normalized * vel);
+         else _rigidbody.velocity = dir.normalized * vel;
 
         var rotationX = Input.GetAxis("RightHorizontal" + id);
         var rotationY = -Input.GetAxis("RightVertical" + id);
@@ -54,8 +60,7 @@ public class PlayerHandler : MonoBehaviour {
         }    
 
         if (Input.GetButton("Back" + id)) {
-            //destroy what in hand
-            Debug.Log("wadaewd");
+            if (weapon) weapon.Fire();
         }
     }
     
@@ -66,6 +71,21 @@ public class PlayerHandler : MonoBehaviour {
             //Instantiate (explosionPrefab, hit.point, rot);
             Destroy (collision.gameObject);
             hp -= 10;
+        }
+      }
+    
+    
+    void OnTriggerEnter (Collider col) {
+                       if (col.gameObject.CompareTag("Ice"))
+                       {
+                           onIce = true;
+                       }
+                   }
+    
+    void OnTriggerExit (Collider col) {
+        if (col.gameObject.CompareTag("Ice"))
+        {
+            onIce = false;
         }
     }
     

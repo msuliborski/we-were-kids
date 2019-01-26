@@ -15,4 +15,10 @@ public class Rifle : PickUp
     {
         
     }
+    
+    public override void Fire() 
+    {
+        
+    }
+    
 }
