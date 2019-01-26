@@ -15,6 +15,10 @@ public class FatherController : MonoBehaviour
     [SerializeField]
     private List<Vector3> _patrolPositions;
     private float _isWaitingTimer = 1.5f;
+    
+    
+    public static int player0Score = 0;
+    public static int player1Score = 0;
 
     [SerializeField] private AudioClip slap;
     private AudioSource source;

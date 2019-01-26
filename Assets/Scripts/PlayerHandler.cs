@@ -10,6 +10,12 @@ public class PlayerHandler : MonoBehaviour {
     [SerializeField] private bool onIce = false;
     [SerializeField] private AudioClip ouch;
     [SerializeField] private AudioClip pickup;
+
+    public GameObject spawnPoint;
+    private bool died = false;
+    private bool doOnce = true;
+    private float cooldown = 5;
+    
     private AudioSource source;
     
     
@@ -33,13 +39,29 @@ public class PlayerHandler : MonoBehaviour {
 
     // Update is called once per frame
     private void Update() {
-
-        
-
-        if (hp <= 0) {
-            //Debug.Log("died");
-        }
-        
+       
+//        if (hp <= 0 && !died) {
+//            //Debug.Log("died");
+//            cooldown -= Time.deltaTime;
+//            if (doOnce) {
+//                doOnce = false;
+//                if (id == 1) FatherController.player0Score++;
+//                else FatherController.player1Score++;
+//                GetComponent<MeshRenderer>().enabled = false;
+//                GetComponent<CapsuleCollider>().isTrigger = true;
+//            }
+//
+//            if (cooldown <= 0) {
+//                died = false;
+//                hp = 100;
+//                transform.position = new Vector3(spawnPoint.transform.position.x, transform.position.y, spawnPoint.transform.position.z);
+//                cooldown = 5;
+//                GetComponent<MeshRenderer>().enabled = true;
+//                GetComponent<CapsuleCollider>().isTrigger = false;
+//                doOnce = true;
+//            }
+//        }
+//        
         
         var dir = Vector3.zero;
         dir.x = Input.GetAxis("LeftVertical" + id);
