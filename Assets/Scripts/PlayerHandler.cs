@@ -65,14 +65,6 @@ public class PlayerHandler : MonoBehaviour {
             }
         }
         
-
-        
-
-        if (hp <= 0) {
-            //Debug.Log("died");
-        }
-        
-        
         var dir = Vector3.zero;
         dir.x = Input.GetAxis("LeftVertical" + id);
         dir.z = Input.GetAxis("LeftHorizontal" + id);
@@ -87,8 +79,6 @@ public class PlayerHandler : MonoBehaviour {
 
         var rotationX = Input.GetAxis("RightHorizontal" + id);
         var rotationY = -Input.GetAxis("RightVertical" + id);
-        
-        
         
         
         if (rotationX < 0 || rotationX > 0 || rotationY < 0 || rotationY > 0) {
@@ -115,6 +105,7 @@ public class PlayerHandler : MonoBehaviour {
         }
     }
     
+    
     void OnCollisionEnter (Collision collision) {
         if (collision.gameObject.CompareTag("Bullet")){
             source.clip = ouch;
@@ -128,7 +119,6 @@ public class PlayerHandler : MonoBehaviour {
             Destroy (collision.gameObject);
             hp -= 50;
         }
-        
     }
 
     
