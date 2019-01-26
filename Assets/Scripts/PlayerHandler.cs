@@ -114,8 +114,16 @@ public class PlayerHandler : MonoBehaviour {
             Destroy (collision.gameObject);
             hp -= 10;
         }
-        if(collision.gameObject.CompareTag("Weapon")){
-            PickUp rifleScript = collision.gameObject.GetComponent<PickUp>();
+        
+    }
+
+    
+
+    void OnTriggerEnter (Collider col) {
+        if (col.gameObject.CompareTag("Ice"))
+            onIce = true;
+        else if(col.gameObject.CompareTag("Weapon")){
+            PickUp rifleScript = col.gameObject.GetComponent<PickUp>();
             if(!rifleScript.isPickedUp) {
                 if (weapon != null) Destroy(weapon.gameObject);
                 source.clip = pickup;
@@ -127,12 +135,6 @@ public class PlayerHandler : MonoBehaviour {
                 //Destroy(gameObject);
             }
         }
-    }
-    
-    
-    void OnTriggerEnter (Collider col) {
-        if (col.gameObject.CompareTag("Ice"))
-            onIce = true;
     }
     
     void OnTriggerExit (Collider col) {
