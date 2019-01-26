@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pickable
   - Bullet
+  - Ice
   layers:
   - Default
   - TransparentFX
