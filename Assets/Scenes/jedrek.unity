@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51faf20cd9c4febb8bd067327df5c752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 5
+  vel: 8
   rot: 150
   projectile: {fileID: 8709905363783251462, guid: 4f631f579af9121c7b396132e33f2c59,
     type: 3}
