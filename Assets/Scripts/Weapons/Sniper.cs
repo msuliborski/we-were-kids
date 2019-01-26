@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.UIElements;
 using UnityEngine;
 
-public class Rifle : PickUp
+public class Sniper : PickUp
 {
     [SerializeField] private AudioClip shot;
     private AudioSource source;
     public GameObject projectile;
     private bool play = true;
     void Start() {
-        shootCooldown = 0.2f;
+        shootCooldown = 2f;
         source = GetComponent<AudioSource>();
     }
 
@@ -32,11 +31,12 @@ public class Rifle : PickUp
     
     public override void Fire() {
         if (Math.Abs(shootCooldown) < 0.01) {
-            var parent = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 90, transform.rotation.eulerAngles.z);
-            Instantiate(projectile, owner.transform.GetChild(0).gameObject.transform.position, parent);
-            source.clip = shot;    
+            var ang1 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 90, transform.rotation.eulerAngles.z);
+            var pos1 = new Vector3(owner.transform.GetChild(0).gameObject.transform.position.x, owner.transform.GetChild(0).gameObject.transform.position.y-4, owner.transform.GetChild(0).gameObject.transform.position.z);
+            source.clip = shot;
             source.PlayOneShot(source.clip);
-            shootCooldown = 0.2f;
+            Instantiate(projectile, pos1, ang1);
+            shootCooldown = 2f;
         }
     }
     

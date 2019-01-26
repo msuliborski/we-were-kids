@@ -12,6 +12,7 @@ TagManager:
   - Weapon
   - Ice
   - Wall
+  - SuperBullet
   layers:
   - Default
   - TransparentFX

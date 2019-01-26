@@ -27,7 +27,7 @@ public class PlayerHandler : MonoBehaviour {
     public PickUp weapon = null;
     public PickUp grenade;
     
-    private static int hp = 100;
+    public int hp = 100;
 
     private GameObject inst;
     private Rigidbody _rigidbody;
@@ -35,9 +35,9 @@ public class PlayerHandler : MonoBehaviour {
     // Start is called before the first frame update
     private void Start()
     {
-        model = transform.GetChild(0);
+        model = transform.GetChild(1);
         _rigidbody = GetComponent<Rigidbody>();
-        inst = transform.GetChild(1).gameObject;
+        inst = transform.GetChild(0).gameObject;
         source = GetComponent<AudioSource>();
     }
 
@@ -45,28 +45,26 @@ public class PlayerHandler : MonoBehaviour {
 
     private void FixedUpdate() {
        
-//        if (hp <= 0 && !died) {
-//            //Debug.Log("died");
-//            cooldown -= Time.deltaTime;
-//            if (doOnce) {
-//                doOnce = false;
-//                if (id == 1) FatherController.player0Score++;
-//                else FatherController.player1Score++;
-//                GetComponent<MeshRenderer>().enabled = false;
-//                GetComponent<CapsuleCollider>().isTrigger = true;
-//            }
-//
-//            if (cooldown <= 0) {
-//                died = false;
-//                hp = 100;
-//                transform.position = new Vector3(spawnPoint.transform.position.x, transform.position.y, spawnPoint.transform.position.z);
-//                cooldown = 5;
-//                GetComponent<MeshRenderer>().enabled = true;
-//                GetComponent<CapsuleCollider>().isTrigger = false;
-//                doOnce = true;
-//            }
-//        }
-//        
+        if (hp <= 0 && !died) {
+            //Debug.Log("died");
+            cooldown -= Time.deltaTime;
+            if (doOnce) {
+                doOnce = false;
+                if (id == 1) FatherController.player0Score++;
+                else FatherController.player1Score++; //give points (father holds 'em)
+                GetComponent<CapsuleCollider>().isTrigger = true;
+            }
+
+            if (cooldown <= 0) {
+                died = false;
+                hp = 100;
+                transform.position = new Vector3(spawnPoint.transform.position.x, transform.position.y, spawnPoint.transform.position.z);
+                cooldown = 5;
+                GetComponent<CapsuleCollider>().isTrigger = false;
+                doOnce = true;
+            }
+        }
+        
 
         
 
@@ -119,13 +117,16 @@ public class PlayerHandler : MonoBehaviour {
     
     void OnCollisionEnter (Collision collision) {
         if (collision.gameObject.CompareTag("Bullet")){
-//            var hit = collision.contacts[0]; 
-            //var rot = Quaternion.FromToRotation(Vector3.up, hit.normal);
-            //Instantiate (explosionPrefab, hit.point, rot);
             source.clip = ouch;
             source.PlayOneShot(source.clip);
             Destroy (collision.gameObject);
             hp -= 10;
+        }        
+        if (collision.gameObject.CompareTag("SuperBullet")){
+            source.clip = ouch;
+            source.PlayOneShot(source.clip);
+            Destroy (collision.gameObject);
+            hp -= 50;
         }
         
     }

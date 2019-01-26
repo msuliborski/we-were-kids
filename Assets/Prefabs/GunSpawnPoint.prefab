@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1693747461852952090}
   - component: {fileID: 1693747461852952084}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: GunSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 4642354257134867277, guid: 75524dfe6970208578c0292350dcfae6,
     type: 3}
-  rate: 5
+  rate: 30
 --- !u!23 &1693747461852952084
 MeshRenderer:
   m_ObjectHideFlags: 0

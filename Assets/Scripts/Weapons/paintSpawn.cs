@@ -23,7 +23,7 @@ public class paintSpawn : MonoBehaviour
             Debug.Log("gwd");
             Instantiate(plama, transform.position, Quaternion.Euler(0, 0, 0), transform);
             transform.GetChild(0).transform.rotation = Quaternion.Euler(90, 0, 0);
-            transform.GetChild(0).transform.position = new Vector3(transform.position.x, transform.position.y + 0.3f, transform.position.z);
+            transform.GetChild(0).transform.position = new Vector3(transform.position.x - 2.0f, transform.position.y - 2.8f, transform.position.z - 3.0f);
             Destroy(collision.gameObject);
             alreadySpilled = true;
         }

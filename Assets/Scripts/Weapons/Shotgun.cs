@@ -10,7 +10,7 @@ public class Shotgun : PickUp
     public GameObject projectile;
     private bool play = true;
     void Start() {
-        shootCooldown = 1.0f;
+        shootCooldown = 1.2f;
         source = GetComponent<AudioSource>();
     }
 
@@ -48,7 +48,7 @@ public class Shotgun : PickUp
             Instantiate(projectile, pos3, ang3);
             Instantiate(projectile, pos4, ang4);
             Instantiate(projectile, pos5, ang5);
-            shootCooldown = 1.0f;
+            shootCooldown = 1.2f;
         }
     }
     
