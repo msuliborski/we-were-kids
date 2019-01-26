@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float vel;
     [SerializeField] private float rot;
     [SerializeField] private GameObject projectile;
-    [SerializeField] private GameObject inst;
+    private GameObject inst;
 
     [SerializeField] public int id = 0;
 
@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+		inst = GameObject.Find("Inst");
 
 		goKey.Add(0, KeyCode.W);
 		goKey.Add(1, KeyCode.UpArrow);
