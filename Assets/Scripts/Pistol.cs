@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.UIElements;
 using UnityEngine;
 
-public class Rifle : PickUp
+public class Pistol : PickUp
 {
     
     public GameObject projectile;
     void Start() {
-        shootCooldown = 0.3f;
+        shootCooldown = 0.8f;
     }
 
     // Update is called once per frame
@@ -26,7 +25,7 @@ public class Rifle : PickUp
         if (Math.Abs(shootCooldown) < 0.01) {
             var parent = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 90, transform.rotation.eulerAngles.z);
             Instantiate(projectile, owner.transform.GetChild(0).gameObject.transform.position, parent);
-            shootCooldown = 0.3f;
+            shootCooldown = 0.8f;
         }
     }
     
