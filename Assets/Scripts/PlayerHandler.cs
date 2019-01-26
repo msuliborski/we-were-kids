@@ -3,40 +3,63 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class test : MonoBehaviour
-{
+public class PlayerHandler : MonoBehaviour {
     [SerializeField] private int id;
     [SerializeField] private float vel;
     [SerializeField] private float rot;
     [SerializeField] private GameObject projectile;
 
-    private static bool holdingWeapon = false;
+    public bool holdingWeapon = false;
     
+    private static int hp = 100;
+
     private GameObject inst;
+    private Rigidbody _rigidbody;
+
     // Start is called before the first frame update
-    void Start() {
+    private void Start() {
+        _rigidbody = GetComponent<Rigidbody>();
         inst = transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
-    void Update() {
-        Vector3 dir = Vector3.zero;
-        dir.x = Input.GetAxis("LeftVertical"+id);
-        dir.z = Input.GetAxis("LeftHorizontal"+id);
-        GetComponent<Rigidbody>().velocity = dir.normalized*vel;
+    private void Update() {
 
-        float rotationX = Input.GetAxis("RightHorizontal"+id);
-        float rotationY = -Input.GetAxis("RightVertical"+id);
 
-        if (rotationX != 0) {
-            Vector3 look = new Vector3(rotationX, 0, rotationY);
+        if (hp <= 0) {
+            Debug.Log("died");
+        }
+        
+        
+        var dir = Vector3.zero;
+        dir.x = Input.GetAxis("LeftVertical" + id);
+        dir.z = Input.GetAxis("LeftHorizontal" + id);
+        _rigidbody.velocity = dir.normalized * vel;
+
+        var rotationX = Input.GetAxis("RightHorizontal" + id);
+        var rotationY = -Input.GetAxis("RightVertical" + id);
+
+        if (rotationX < -0.1 || rotationX > 0.1) {
+            var look = new Vector3(rotationX, 0, rotationY);
             transform.rotation = Quaternion.LookRotation(look);
+        } else {
+            _rigidbody.angularVelocity = Vector3.zero;
         }
 
-        if (Math.Abs(Input.GetAxis("Fire"+id)) > 0.5) {
-            Quaternion parent = transform.rotation;
-            Instantiate(projectile, inst.transform.position, parent);
-        }
-
+        if (!(Math.Abs(Input.GetAxis("Fire" + id)) > 0.5)) return;
+        var parent = transform.rotation;
+        Instantiate(projectile, inst.transform.position, parent);
     }
+    
+    void OnCollisionEnter (Collision collision) {
+        if (collision.gameObject.CompareTag("Bullet")){
+//            var hit = collision.contacts[0]; 
+            //var rot = Quaternion.FromToRotation(Vector3.up, hit.normal);
+            //Instantiate (explosionPrefab, hit.point, rot);
+            Destroy (collision.gameObject);
+            hp -= 10;
+        }
+    }
+    
+    
 }
