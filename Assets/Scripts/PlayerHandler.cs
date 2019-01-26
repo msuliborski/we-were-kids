@@ -10,11 +10,13 @@ public class PlayerHandler : MonoBehaviour {
     [SerializeField] private bool onIce = false;
     [SerializeField] private AudioClip ouch;
     [SerializeField] private AudioClip pickup;
+    
 
     public GameObject spawnPoint;
     private bool died = false;
     private bool doOnce = true;
     private float cooldown = 5;
+    private Transform model;
     
     private AudioSource source;
     
@@ -31,9 +33,11 @@ public class PlayerHandler : MonoBehaviour {
     private Rigidbody _rigidbody;
 
     // Start is called before the first frame update
-    private void Start() {
+    private void Start()
+    {
+        model = transform.GetChild(0);
         _rigidbody = GetComponent<Rigidbody>();
-        inst = transform.GetChild(0).gameObject;
+        inst = transform.GetChild(1).gameObject;
         source = GetComponent<AudioSource>();
     }
 
@@ -74,12 +78,21 @@ public class PlayerHandler : MonoBehaviour {
         var dir = Vector3.zero;
         dir.x = Input.GetAxis("LeftVertical" + id);
         dir.z = Input.GetAxis("LeftHorizontal" + id);
+        
+        if (dir.x < 0 || dir.x > 0 || dir.z < 0 || dir.z > 0) {
+            var look = new Vector3(dir.x, 0, dir.z);
+            model.transform.rotation = Quaternion.Slerp(model.transform.rotation,Quaternion.LookRotation(look),0.3f);
+        }
+        
         if (onIce)_rigidbody.AddForce(dir.normalized * vel);
         else _rigidbody.velocity = dir.normalized * vel;
 
         var rotationX = Input.GetAxis("RightHorizontal" + id);
         var rotationY = -Input.GetAxis("RightVertical" + id);
-
+        
+        
+        
+        
         if (rotationX < 0 || rotationX > 0 || rotationY < 0 || rotationY > 0) {
             var look = new Vector3(rotationX, 0, rotationY);
             transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(look),0.3f);
