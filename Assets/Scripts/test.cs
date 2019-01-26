@@ -19,14 +19,22 @@ public class test : MonoBehaviour
     void Update()
     {
         
-        if(Math.Abs(Input.GetAxis("LeftVertical1")) > 0.5)
-            GetComponent<Rigidbody>().velocity = transform.forward*vel;
-        else
-            GetComponent<Rigidbody>().velocity = Vector3.zero;
+        Vector3 dir = Vector3.zero;
+        dir.x = Input.GetAxis("LeftVertical1");
+        dir.z = Input.GetAxis("LeftHorizontal1");
+        GetComponent<Rigidbody>().velocity = dir.normalized*vel;
         
-        Vector3 r = Vector3.zero;
-        r.y = Input.GetAxis("RightHorizontal1");
-        transform.Rotate(r * Time.deltaTime * rot, Space.World);
+//        Vector3 r = Vector3.zero;
+//        r.y = Input.GetAxis("RightHorizontal1");
+//        transform.Rotate(r * Time.deltaTime * rot, Space.World);
+        float rotationX = Input.GetAxis("RightHorizontal1");
+        float rotationY = -Input.GetAxis("RightVertical1");
+
+        if (rotationX != 0)
+        {
+            Vector3 look = new Vector3(rotationX, 0, rotationY);
+            transform.rotation = Quaternion.LookRotation(look);
+        }
 
         if (Math.Abs(Input.GetAxis("Fire1")) > 0.5)
         {
