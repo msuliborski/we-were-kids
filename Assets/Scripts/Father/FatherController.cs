@@ -15,6 +15,8 @@ public class FatherController : MonoBehaviour
     [SerializeField]
     private List<Vector3> _patrolPositions;
     private float _isWaitingTimer = 1.5f;
+
+    private Animator anim;
     
     
     public static int player0Score = 0;
@@ -45,6 +47,8 @@ public class FatherController : MonoBehaviour
     
     void Start()
     {
+
+        anim = GetComponentInChildren<Animator>();
         _patrolPositions = new List<Vector3>();
         GameObject points = GameObject.Find("PatrolPoints");
         for (int i = 0; i < points.transform.childCount; i++)
@@ -58,7 +62,7 @@ public class FatherController : MonoBehaviour
         _agent.SetDestination(_currentTarget);
         _agent.speed = 30f;
         Debug.Log("start");
-
+        anim.SetBool("running", true);
         source = GetComponent<AudioSource>();
         source.clip = slap;
     }
@@ -77,6 +81,7 @@ public class FatherController : MonoBehaviour
                 {
                     //_agent.Stop();
                     _isWaiting = true;
+                    anim.SetBool("running", false);
                 }
             }
             else
@@ -87,6 +92,7 @@ public class FatherController : MonoBehaviour
                 {
                     Debug.Log(_isWaitingTimer);
                    _isWaiting = false;
+                   anim.SetBool("running", true);
                    _isWaitingTimer = 1.5f;
                    _currentTarget = RandomDest();
                    _agent.SetDestination(_currentTarget);
