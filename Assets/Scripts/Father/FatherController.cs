@@ -16,6 +16,9 @@ public class FatherController : MonoBehaviour
     private List<Vector3> _patrolPositions;
     private float _isWaitingTimer = 1.5f;
 
+    [SerializeField] private AudioClip slap;
+    private AudioSource source;
+
     
     public void SetIsHunting(bool isHunting, Vector3 target)
     {
@@ -51,7 +54,9 @@ public class FatherController : MonoBehaviour
         _agent.SetDestination(_currentTarget);
         _agent.speed = 30f;
         Debug.Log("start");
-        
+
+        source = GetComponent<AudioSource>();
+        source.clip = slap;
     }
     
     
@@ -111,7 +116,7 @@ public class FatherController : MonoBehaviour
 
         if (col.gameObject.tag == "children")
         {
-            // WSTAW BACHORA DO KATA
+            source.PlayOneShot(source.clip);
         }
     }
 }
