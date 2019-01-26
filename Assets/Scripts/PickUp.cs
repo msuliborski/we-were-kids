@@ -25,9 +25,11 @@ public class PickUp : MonoBehaviour
     void OnCollisionEnter (Collision col) {
         if(col.gameObject.CompareTag("Player")){
             PlayerHandler playerScript = col.gameObject.GetComponent<PlayerHandler>();
-            if(!playerScript.holdingWeapon) {
-                owner = col.gameObject;
+            if(gameObject != playerScript.weapon) {
                 isPickedUp = true;
+                owner = col.gameObject;
+                Destroy(playerScript.weapon.gameObject);
+                playerScript.weapon = gameObject;
                 playerScript.holdingWeapon = true;
                 //Destroy(gameObject);
             }

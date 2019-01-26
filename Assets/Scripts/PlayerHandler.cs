@@ -10,6 +10,7 @@ public class PlayerHandler : MonoBehaviour {
     [SerializeField] private GameObject projectile;
 
     public bool holdingWeapon = false;
+    public GameObject weapon;
     
     private static int hp = 100;
 
@@ -35,6 +36,7 @@ public class PlayerHandler : MonoBehaviour {
         dir.x = Input.GetAxis("LeftVertical" + id);
         dir.z = Input.GetAxis("LeftHorizontal" + id);
         _rigidbody.AddForce(dir.normalized * vel);
+        // _rigidbody.velocity = dir.normalized * vel;
 
         var rotationX = Input.GetAxis("RightHorizontal" + id);
         var rotationY = -Input.GetAxis("RightVertical" + id);
