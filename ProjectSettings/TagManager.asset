@@ -9,6 +9,7 @@ TagManager:
   - Rifle
   - Pistol
   - Shotgun
+  - Weapon
   layers:
   - Default
   - TransparentFX
