@@ -2,8 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e132c0c0-3637-44f1-bd07-cb88e53309b8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.lgj-2019/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lgj-2019/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.lgj-2019/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lgj-2019/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.lgj-2019/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lgj-2019/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshComponentsGUIUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshComponentsGUIUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshLinkEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshLinkEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshModifierEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshModifierEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshModifierVolumeEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshModifierVolumeEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshSurfaceEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents/Editor/NavMeshSurfaceEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents/Scripts/NavMeshLink.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents/Scripts/NavMeshLink.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents/Scripts/NavMeshModifier.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents/Scripts/NavMeshModifier.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents/Scripts/NavMeshModifierVolume.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents/Scripts/NavMeshModifierVolume.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents/Scripts/NavMeshSurface.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NavMeshComponents/Scripts/NavMeshSurface.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pathfinding.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pathfinding/Direction.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pathfinding/Direction.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pathfinding/Field.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pathfinding/Field.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pathfinding/FieldGenerator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pathfinding/FieldGenerator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,26 +50,64 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Flag.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
+            <state relative-caret-position="30">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+              <folding>
+                <marker date="1548450838358" expanded="true" signature="6:78" ph="..." />
+                <marker date="1548450838358" expanded="true" signature="113:540" ph="{...}" />
+                <marker date="1548450838358" expanded="true" signature="133:538" ph="{...}" />
+                <marker date="1548450838358" expanded="true" signature="176:332" ph="{...}" />
+                <marker date="1548450838358" expanded="true" signature="228:322" ph="{...}" />
+                <marker date="1548450838358" expanded="true" signature="374:532" ph="{...}" />
+                <marker date="1548450838358" expanded="true" signature="426:522" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Pathfinding/FieldGenerator.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Child Controller/ChildController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="90">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+              <folding>
+                <marker date="1548453493699" expanded="false" signature="6:78" ph="..." />
+                <marker date="1548453493699" expanded="true" signature="124:424" ph="{...}" />
+                <marker date="1548453493699" expanded="true" signature="190:211" ph="{...}" />
+                <marker date="1548453493699" expanded="true" signature="282:303" ph="{...}" />
+                <marker date="1548453493699" expanded="true" signature="365:386" ph="{...}" />
+                <marker date="1548453493699" expanded="true" signature="409:422" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Father/FatherController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="45" column="67" selection-start-line="45" selection-start-column="67" selection-end-line="45" selection-end-column="67" />
+              <folding>
+                <marker date="1548463958864" expanded="true" signature="6:100" ph="..." />
+                <marker date="1548463958864" expanded="true" signature="147:3517" ph="{...}" />
+                <marker date="1548463958864" expanded="true" signature="529:924" ph="{...}" />
+                <marker date="1548463958864" expanded="true" signature="558:728" ph="{...}" />
+                <marker date="1548463958864" expanded="true" signature="741:918" ph="{...}" />
+                <marker date="1548463958864" expanded="true" signature="951:1572" ph="{...}" />
+                <marker date="1548463958864" expanded="true" signature="1128:1306" ph="{...}" />
+                <marker date="1548463958864" expanded="true" signature="1640:2891" ph="{...}" />
+                <marker date="1548463958864" expanded="true" signature="1654:1685" ph="/* if (!_isHunting) ... */" />
+                <marker date="1548463958864" expanded="true" signature="1724:1968" ph="{...}" />
+                <marker date="1548463958864" expanded="true" signature="1796:1954" ph="{...}" />
+                <marker date="1548463958864" expanded="true" signature="1985:2441" ph="{...}" />
+                <marker date="1548463958864" expanded="true" signature="2137:2427" ph="{...}" />
+                <marker date="1548463958864" expanded="true" signature="2449:2480" ph="/* } ... */" />
+                <marker date="1548463958864" expanded="true" signature="2492:2873" ph="/* if (Mathf.Approximately(transform.position.x, _currentTarget.x) &amp;&amp; Mathf.Approximately(transform.position.z, _ ... */" />
+                <marker date="1548463958864" expanded="true" signature="2926:3352" ph="{...}" />
+                <marker date="1548463958864" expanded="true" signature="3062:3148" ph="/* while (random == _currentTarget) ... */" />
+                <marker date="1548463958864" expanded="true" signature="3399:3515" ph="{...}" />
+                <marker date="1548463958864" expanded="true" signature="3452:3509" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,16 +118,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pathfinding/FieldGenerator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Flag.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Child Controller/ChildController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Father/FatherController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Flag.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Child Controller/ChildController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Flag.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Shooting.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Father/FatherController.cs" />
       </list>
     </option>
   </component>
@@ -64,17 +136,20 @@
       <facet id="riderModule/invalid/Default Android Facet" />
     </ignored-facets>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="240" />
-    <option name="y" value="130" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="213" />
+    <option name="y" value="2" />
     <option name="width" value="1440" />
-    <option name="height" value="783" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectView">
     <navigator currentView="FileSystemExplorer" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
       <pane id="FileSystemExplorer">
         <subPane>
           <expand>
@@ -91,27 +166,6 @@
               <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
               <item name="lgj-2019" type="34e6ba20:FileSystemExplorerNode" />
               <item name="Assets" type="34e6ba20:FileSystemExplorerNode" />
-              <item name=".idea" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="lgj-2019" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Assets" type="34e6ba20:FileSystemExplorerNode" />
-              <item name=".idea" type="34e6ba20:FileSystemExplorerNode" />
-              <item name=".idea.Assets" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="lgj-2019" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Assets" type="34e6ba20:FileSystemExplorerNode" />
-              <item name=".idea" type="34e6ba20:FileSystemExplorerNode" />
-              <item name=".idea.Assets" type="34e6ba20:FileSystemExplorerNode" />
-              <item name=".idea" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="lgj-2019" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Assets" type="34e6ba20:FileSystemExplorerNode" />
               <item name="Scripts" type="34e6ba20:FileSystemExplorerNode" />
             </path>
           </expand>
@@ -119,9 +173,6 @@
         </subPane>
       </pane>
       <pane id="AssemblyExplorer" />
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
       </pane>
@@ -131,7 +182,7 @@
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="SolutionBuilderGeneralOptionsPageId" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -180,15 +231,13 @@
       <workItem from="1548446596006" duration="67000" />
       <workItem from="1548446700730" duration="34000" />
       <workItem from="1548446752782" duration="398000" />
-      <workItem from="1548447602850" duration="2419000" />
-      <workItem from="1548451008287" duration="4369000" />
-      <workItem from="1548457772842" duration="3358000" />
-      <workItem from="1548465686774" duration="483000" />
+      <workItem from="1548447602850" duration="1357000" />
+      <workItem from="1548453221543" duration="11012000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13070000" />
+    <option name="totallyTimeSpent" value="14000000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -200,15 +249,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1048" extended-state="6" />
+    <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15828878" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info id="Captures" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18981019" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="Captures" order="5" />
+      <window_info anchor="bottom" id="Android Profiler" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Performance Profiler" />
+      <window_info anchor="bottom" id="Logcat" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -223,17 +275,16 @@
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" />
-      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" weight="0.3289183" />
-      <window_info anchor="bottom" id="Build" order="15" weight="0.32855567" />
-      <window_info anchor="bottom" id="Android Profiler" order="16" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Logcat" order="17" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" visible="true" weight="0.3279678" />
+      <window_info anchor="bottom" id="Build" order="15" weight="0.3289183" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
+      <window_info anchor="right" id="Unit Tests Coverage" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Errors In Solution" order="3" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Device File Explorer" order="6" side_tool="true" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,28 +313,62 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PigletView.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Satan.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Cultist.cs" />
-    <entry file="file://$PROJECT_DIR$/lgj-2019.sln">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Child Controller/ChildController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding>
+            <marker date="1548453493699" expanded="false" signature="6:78" ph="..." />
+            <marker date="1548453493699" expanded="true" signature="124:424" ph="{...}" />
+            <marker date="1548453493699" expanded="true" signature="190:211" ph="{...}" />
+            <marker date="1548453493699" expanded="true" signature="282:303" ph="{...}" />
+            <marker date="1548453493699" expanded="true" signature="365:386" ph="{...}" />
+            <marker date="1548453493699" expanded="true" signature="409:422" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Shooting.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Flag.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        <state relative-caret-position="30">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding>
+            <marker date="1548450838358" expanded="true" signature="6:78" ph="..." />
+            <marker date="1548450838358" expanded="true" signature="113:540" ph="{...}" />
+            <marker date="1548450838358" expanded="true" signature="133:538" ph="{...}" />
+            <marker date="1548450838358" expanded="true" signature="176:332" ph="{...}" />
+            <marker date="1548450838358" expanded="true" signature="228:322" ph="{...}" />
+            <marker date="1548450838358" expanded="true" signature="374:532" ph="{...}" />
+            <marker date="1548450838358" expanded="true" signature="426:522" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Pathfinding/FieldGenerator.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Father/FatherController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
+        <state relative-caret-position="121">
+          <caret line="45" column="67" selection-start-line="45" selection-start-column="67" selection-end-line="45" selection-end-column="67" />
+          <folding>
+            <marker date="1548463958864" expanded="true" signature="6:100" ph="..." />
+            <marker date="1548463958864" expanded="true" signature="147:3517" ph="{...}" />
+            <marker date="1548463958864" expanded="true" signature="529:924" ph="{...}" />
+            <marker date="1548463958864" expanded="true" signature="558:728" ph="{...}" />
+            <marker date="1548463958864" expanded="true" signature="741:918" ph="{...}" />
+            <marker date="1548463958864" expanded="true" signature="951:1572" ph="{...}" />
+            <marker date="1548463958864" expanded="true" signature="1128:1306" ph="{...}" />
+            <marker date="1548463958864" expanded="true" signature="1640:2891" ph="{...}" />
+            <marker date="1548463958864" expanded="true" signature="1654:1685" ph="/* if (!_isHunting) ... */" />
+            <marker date="1548463958864" expanded="true" signature="1724:1968" ph="{...}" />
+            <marker date="1548463958864" expanded="true" signature="1796:1954" ph="{...}" />
+            <marker date="1548463958864" expanded="true" signature="1985:2441" ph="{...}" />
+            <marker date="1548463958864" expanded="true" signature="2137:2427" ph="{...}" />
+            <marker date="1548463958864" expanded="true" signature="2449:2480" ph="/* } ... */" />
+            <marker date="1548463958864" expanded="true" signature="2492:2873" ph="/* if (Mathf.Approximately(transform.position.x, _currentTarget.x) &amp;&amp; Mathf.Approximately(transform.position.z, _ ... */" />
+            <marker date="1548463958864" expanded="true" signature="2926:3352" ph="{...}" />
+            <marker date="1548463958864" expanded="true" signature="3062:3148" ph="/* while (random == _currentTarget) ... */" />
+            <marker date="1548463958864" expanded="true" signature="3399:3515" ph="{...}" />
+            <marker date="1548463958864" expanded="true" signature="3452:3509" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
