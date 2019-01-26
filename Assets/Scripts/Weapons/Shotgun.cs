@@ -5,15 +5,25 @@ using UnityEngine;
 
 public class Shotgun : PickUp
 {
-    
+    [SerializeField] private AudioClip shot;
+    [SerializeField] private AudioClip pickup;
+    private AudioSource source;
     public GameObject projectile;
+    private bool play = true;
     void Start() {
         shootCooldown = 1.0f;
+        source = GetComponent<AudioSource>();
+        source.clip = pickup;
     }
 
     // Update is called once per frame
     void Update() {
         if (isPickedUp) {
+            if (play)
+            {
+                source.PlayOneShot(source.clip);
+                play = false;
+            }
             transform.position = owner.transform.GetChild(0).position;
             transform.rotation = owner.transform.GetChild(0).rotation;
         }
@@ -33,6 +43,8 @@ public class Shotgun : PickUp
             var pos3 = new Vector3(owner.transform.GetChild(0).gameObject.transform.position.x, owner.transform.GetChild(0).gameObject.transform.position.y, owner.transform.GetChild(0).gameObject.transform.position.z);
             var pos4 = new Vector3(owner.transform.GetChild(0).gameObject.transform.position.x, owner.transform.GetChild(0).gameObject.transform.position.y+2, owner.transform.GetChild(0).gameObject.transform.position.z);
             var pos5 = new Vector3(owner.transform.GetChild(0).gameObject.transform.position.x, owner.transform.GetChild(0).gameObject.transform.position.y+4, owner.transform.GetChild(0).gameObject.transform.position.z);
+            source.clip = shot;
+            source.PlayOneShot(source.clip);
             Instantiate(projectile, pos1, ang1);
             Instantiate(projectile, pos2, ang2);
             Instantiate(projectile, pos3, ang3);
