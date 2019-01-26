@@ -31,6 +31,7 @@ public class PlayerHandler : MonoBehaviour {
     // Update is called once per frame
     private void Update() {
 
+        
 
         if (hp <= 0) {
             //Debug.Log("died");

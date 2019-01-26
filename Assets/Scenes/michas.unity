@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  vel: 50
+  vel: 40
   rot: 0
   onIce: 0
   holdingWeapon: 0
@@ -2093,7 +2093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
-  vel: 50
+  vel: 40
   rot: 0
   onIce: 0
   holdingWeapon: 0
