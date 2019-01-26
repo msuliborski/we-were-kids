@@ -1,97 +1,97 @@
 fileFormatVersion: 2
-guid: ef0f37c0d0eec3940856126e069eee31
+guid: d3916b98680bf6442b61bde5a482c455
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: glowa
-    100004: group
-    100006: mixamorig:Head
-    100008: mixamorig:HeadTop_End
-    100010: mixamorig:Hips
-    100012: mixamorig:LeftArm
-    100014: mixamorig:LeftFoot
-    100016: mixamorig:LeftForeArm
-    100018: mixamorig:LeftHand
-    100020: mixamorig:LeftHandIndex1
-    100022: mixamorig:LeftHandIndex2
-    100024: mixamorig:LeftHandIndex3
-    100026: mixamorig:LeftHandIndex4
-    100028: mixamorig:LeftLeg
-    100030: mixamorig:LeftShoulder
-    100032: mixamorig:LeftToe_End
-    100034: mixamorig:LeftToeBase
-    100036: mixamorig:LeftUpLeg
-    100038: mixamorig:Neck
-    100040: mixamorig:RightArm
-    100042: mixamorig:RightFoot
-    100044: mixamorig:RightForeArm
-    100046: mixamorig:RightHand
-    100048: mixamorig:RightHandIndex1
-    100050: mixamorig:RightHandIndex2
-    100052: mixamorig:RightHandIndex3
-    100054: mixamorig:RightHandIndex4
-    100056: mixamorig:RightLeg
-    100058: mixamorig:RightShoulder
-    100060: mixamorig:RightToe_End
-    100062: mixamorig:RightToeBase
-    100064: mixamorig:RightUpLeg
-    100066: mixamorig:Spine
-    100068: mixamorig:Spine1
-    100070: mixamorig:Spine2
-    100072: nogi
-    100074: opaska
-    100076: pasted__pCube8
-    100078: pSphere1
-    100080: pSphere2
-    100082: pSphere3
-    100084: pSphere4
-    100086: pSphere5
+    100000: glowa
+    100002: group
+    100004: mixamorig:Head
+    100006: mixamorig:HeadTop_End
+    100008: mixamorig:Hips
+    100010: mixamorig:LeftArm
+    100012: mixamorig:LeftFoot
+    100014: mixamorig:LeftForeArm
+    100016: mixamorig:LeftHand
+    100018: mixamorig:LeftHandIndex1
+    100020: mixamorig:LeftHandIndex2
+    100022: mixamorig:LeftHandIndex3
+    100024: mixamorig:LeftHandIndex4
+    100026: mixamorig:LeftLeg
+    100028: mixamorig:LeftShoulder
+    100030: mixamorig:LeftToe_End
+    100032: mixamorig:LeftToeBase
+    100034: mixamorig:LeftUpLeg
+    100036: mixamorig:Neck
+    100038: mixamorig:RightArm
+    100040: mixamorig:RightFoot
+    100042: mixamorig:RightForeArm
+    100044: mixamorig:RightHand
+    100046: mixamorig:RightHandIndex1
+    100048: mixamorig:RightHandIndex2
+    100050: mixamorig:RightHandIndex3
+    100052: mixamorig:RightHandIndex4
+    100054: mixamorig:RightLeg
+    100056: mixamorig:RightShoulder
+    100058: mixamorig:RightToe_End
+    100060: mixamorig:RightToeBase
+    100062: mixamorig:RightUpLeg
+    100064: mixamorig:Spine
+    100066: mixamorig:Spine1
+    100068: mixamorig:Spine2
+    100070: nogi
+    100072: opaska
+    100074: pasted__pCube8
+    100076: pSphere1
+    100078: pSphere2
+    100080: pSphere3
+    100082: pSphere4
+    100084: pSphere5
+    100086: //RootNode
     100088: tulow
-    400000: //RootNode
-    400002: glowa
-    400004: group
-    400006: mixamorig:Head
-    400008: mixamorig:HeadTop_End
-    400010: mixamorig:Hips
-    400012: mixamorig:LeftArm
-    400014: mixamorig:LeftFoot
-    400016: mixamorig:LeftForeArm
-    400018: mixamorig:LeftHand
-    400020: mixamorig:LeftHandIndex1
-    400022: mixamorig:LeftHandIndex2
-    400024: mixamorig:LeftHandIndex3
-    400026: mixamorig:LeftHandIndex4
-    400028: mixamorig:LeftLeg
-    400030: mixamorig:LeftShoulder
-    400032: mixamorig:LeftToe_End
-    400034: mixamorig:LeftToeBase
-    400036: mixamorig:LeftUpLeg
-    400038: mixamorig:Neck
-    400040: mixamorig:RightArm
-    400042: mixamorig:RightFoot
-    400044: mixamorig:RightForeArm
-    400046: mixamorig:RightHand
-    400048: mixamorig:RightHandIndex1
-    400050: mixamorig:RightHandIndex2
-    400052: mixamorig:RightHandIndex3
-    400054: mixamorig:RightHandIndex4
-    400056: mixamorig:RightLeg
-    400058: mixamorig:RightShoulder
-    400060: mixamorig:RightToe_End
-    400062: mixamorig:RightToeBase
-    400064: mixamorig:RightUpLeg
-    400066: mixamorig:Spine
-    400068: mixamorig:Spine1
-    400070: mixamorig:Spine2
-    400072: nogi
-    400074: opaska
-    400076: pasted__pCube8
-    400078: pSphere1
-    400080: pSphere2
-    400082: pSphere3
-    400084: pSphere4
-    400086: pSphere5
+    400000: glowa
+    400002: group
+    400004: mixamorig:Head
+    400006: mixamorig:HeadTop_End
+    400008: mixamorig:Hips
+    400010: mixamorig:LeftArm
+    400012: mixamorig:LeftFoot
+    400014: mixamorig:LeftForeArm
+    400016: mixamorig:LeftHand
+    400018: mixamorig:LeftHandIndex1
+    400020: mixamorig:LeftHandIndex2
+    400022: mixamorig:LeftHandIndex3
+    400024: mixamorig:LeftHandIndex4
+    400026: mixamorig:LeftLeg
+    400028: mixamorig:LeftShoulder
+    400030: mixamorig:LeftToe_End
+    400032: mixamorig:LeftToeBase
+    400034: mixamorig:LeftUpLeg
+    400036: mixamorig:Neck
+    400038: mixamorig:RightArm
+    400040: mixamorig:RightFoot
+    400042: mixamorig:RightForeArm
+    400044: mixamorig:RightHand
+    400046: mixamorig:RightHandIndex1
+    400048: mixamorig:RightHandIndex2
+    400050: mixamorig:RightHandIndex3
+    400052: mixamorig:RightHandIndex4
+    400054: mixamorig:RightLeg
+    400056: mixamorig:RightShoulder
+    400058: mixamorig:RightToe_End
+    400060: mixamorig:RightToeBase
+    400062: mixamorig:RightUpLeg
+    400064: mixamorig:Spine
+    400066: mixamorig:Spine1
+    400068: mixamorig:Spine2
+    400070: nogi
+    400072: opaska
+    400074: pasted__pCube8
+    400076: pSphere1
+    400078: pSphere2
+    400080: pSphere3
+    400082: pSphere4
+    400084: pSphere5
+    400086: //RootNode
     400088: tulow
     2100000: initialShadingGroup
     4300000: tulow
@@ -187,68 +187,68 @@ ModelImporter:
     serializedVersion: 2
     human: []
     skeleton:
-    - name: ch2@Running(Clone)
+    - name: Running(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: tulow
-      parentName: ch2@Running(Clone)
+      parentName: Running(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: nogi
-      parentName: ch2@Running(Clone)
+      parentName: Running(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: glowa
-      parentName: ch2@Running(Clone)
+      parentName: Running(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: opaska
-      parentName: ch2@Running(Clone)
+      parentName: Running(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: pSphere1
-      parentName: ch2@Running(Clone)
+      parentName: Running(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: pSphere2
-      parentName: ch2@Running(Clone)
+      parentName: Running(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: pSphere3
-      parentName: ch2@Running(Clone)
+      parentName: Running(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: pSphere4
-      parentName: ch2@Running(Clone)
+      parentName: Running(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: pSphere5
-      parentName: ch2@Running(Clone)
+      parentName: Running(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: pasted__pCube8
-      parentName: ch2@Running(Clone)
+      parentName: Running(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: group
-      parentName: ch2@Running(Clone)
+      parentName: Running(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:Hips
-      parentName: ch2@Running(Clone)
+      parentName: Running(Clone)
       position: {x: -0.000112188616, y: 0.028117044, z: 0.0005055033}
       rotation: {x: 0.09888377, y: 0.0048453016, z: 0.049132887, w: 0.9938735}
       scale: {x: 1, y: 1, z: 1}
