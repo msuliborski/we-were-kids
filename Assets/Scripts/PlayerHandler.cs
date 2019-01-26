@@ -69,7 +69,7 @@ public class PlayerHandler : MonoBehaviour {
             Destroy (collision.gameObject);
             hp -= 10;
         }
-        if(collision.gameObject.CompareTag("Rifle")){
+        if(collision.gameObject.CompareTag("Weapon")){
             PickUp rifleScript = collision.gameObject.GetComponent<PickUp>();
             if(!rifleScript.isPickedUp) {
                 if (weapon != null) Destroy(weapon.gameObject);
