@@ -4494,6 +4494,11 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1809609239}
+    - target: {fileID: 5438932800008711918, guid: dd36a2e19b8a45e4980715fde5955c48,
+        type: 3}
+      propertyPath: m_Name
+      value: ch0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd36a2e19b8a45e4980715fde5955c48, type: 3}
 --- !u!1001 &9187267532853632534
@@ -4593,5 +4598,10 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 2096460921}
+    - target: {fileID: 222439295500837264, guid: 68fab432af4a16c03bd74ecd19abb8ea,
+        type: 3}
+      propertyPath: m_Name
+      value: ch1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68fab432af4a16c03bd74ecd19abb8ea, type: 3}
