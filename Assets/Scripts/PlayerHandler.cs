@@ -53,7 +53,10 @@ public class PlayerHandler : MonoBehaviour {
                 if (id == 1) FatherController.player0Score++;
                 else FatherController.player1Score++; //give points (father holds 'em)
                 GetComponent<CapsuleCollider>().isTrigger = true;
+                transform.GetChild(1).gameObject.SetActive(false);
+                Destroy(weapon.gameObject);
             }
+            _rigidbody.velocity = new Vector3(0, 0, 0);
 
             if (cooldown <= 0) {
                 died = false;
@@ -62,6 +65,7 @@ public class PlayerHandler : MonoBehaviour {
                 cooldown = 5;
                 GetComponent<CapsuleCollider>().isTrigger = false;
                 doOnce = true;
+                transform.GetChild(1).gameObject.SetActive(true);
             }
         }
         
@@ -73,9 +77,17 @@ public class PlayerHandler : MonoBehaviour {
             var look = new Vector3(dir.x, 0, dir.z);
             model.transform.rotation = Quaternion.Slerp(model.transform.rotation,Quaternion.LookRotation(look),0.3f);
         }
+
+        if (hp > 0) {
+            if (onIce) _rigidbody.AddForce(dir.normalized * vel);
+            else _rigidbody.velocity = dir.normalized * vel;
+        }
         
-        if (onIce)_rigidbody.AddForce(dir.normalized * vel);
-        else _rigidbody.velocity = dir.normalized * vel;
+        if(Math.Abs(_rigidbody.velocity.magnitude) > 0.1)
+            model.GetComponent<Animator>().SetBool("running", true);
+        else
+            model.GetComponent<Animator>().SetBool("running", false);
+        
 
         var rotationX = Input.GetAxis("RightHorizontal" + id);
         var rotationY = -Input.GetAxis("RightVertical" + id);

@@ -10,7 +10,6 @@ public class PickUpAnim : MonoBehaviour
     [SerializeField] private float min = 0.6f;
 
     private bool grow = false;
-    // Start is called before the first frame update
 //    void Start()
 //    {
 //        GetComponent<Rigidbody>().angularVelocity = Vector3.up * rot;
