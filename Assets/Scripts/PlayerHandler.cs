@@ -27,28 +27,34 @@ public class PlayerHandler : MonoBehaviour {
 
 
         if (hp <= 0) {
-            Debug.Log("died");
+            //Debug.Log("died");
         }
         
         
         var dir = Vector3.zero;
         dir.x = Input.GetAxis("LeftVertical" + id);
         dir.z = Input.GetAxis("LeftHorizontal" + id);
-        _rigidbody.velocity = dir.normalized * vel;
+        _rigidbody.AddForce(dir.normalized * vel);
 
         var rotationX = Input.GetAxis("RightHorizontal" + id);
         var rotationY = -Input.GetAxis("RightVertical" + id);
 
         if (rotationX < -0.1 || rotationX > 0.1) {
             var look = new Vector3(rotationX, 0, rotationY);
-            transform.rotation = Quaternion.LookRotation(look);
+            transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(look),0.3f);
         } else {
             _rigidbody.angularVelocity = Vector3.zero;
         }
 
-        if (!(Math.Abs(Input.GetAxis("Fire" + id)) > 0.5)) return;
-        var parent = transform.rotation;
-        Instantiate(projectile, inst.transform.position, parent);
+        if (Math.Abs(Input.GetAxis("Fire" + id)) > 0.5) {
+            var parent = transform.rotation;
+            Instantiate(projectile, inst.transform.position, parent);
+        }    
+
+        if (Input.GetButton("Back" + id)) {
+            //destroy what in hand
+            Debug.Log("wadaewd");
+        }
     }
     
     void OnCollisionEnter (Collision collision) {
