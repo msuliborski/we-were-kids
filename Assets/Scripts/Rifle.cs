@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rifle : MonoBehaviour
+public class Rifle : PickUp
 {
     // Start is called before the first frame update
     void Start()
