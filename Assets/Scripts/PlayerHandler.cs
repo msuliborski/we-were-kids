@@ -56,10 +56,19 @@ public class PlayerHandler : MonoBehaviour {
         } else {
             _rigidbody.angularVelocity = Vector3.zero;
         }
-
-        if (Math.Abs(Input.GetAxis("Fire" + id)) > 0.5) {
+        #if UNITY_STANDALONE_WIN
+        if (Input.GetAxis("FireW" + id) > 0.5) {
             if (weapon) weapon.Fire();
-        }    
+        } 
+
+        #endif
+        
+        #if UNITY_STANDALONE_LINUX
+        if (Math.Abs(Input.GetAxis("FireL" + id)) > 0.5) {
+            if (weapon) weapon.Fire();
+        }  
+        #endif
+          
 
         if (Input.GetButton("Back" + id)) {
         }
