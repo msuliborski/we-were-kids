@@ -1,102 +1,99 @@
 fileFormatVersion: 2
-guid: 834216b90d4c2b744a462bf1ae977bf2
+guid: 833dd0074049c354193e3d3a7426d4f6
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     100002: glowa
     100004: group
-    100006: imagePlane1
-    100008: mixamorig:Head
-    100010: mixamorig:HeadTop_End
-    100012: mixamorig:Hips
-    100014: mixamorig:LeftArm
-    100016: mixamorig:LeftFoot
-    100018: mixamorig:LeftForeArm
-    100020: mixamorig:LeftHand
-    100022: mixamorig:LeftHandIndex1
-    100024: mixamorig:LeftHandIndex2
-    100026: mixamorig:LeftHandIndex3
-    100028: mixamorig:LeftHandIndex4
-    100030: mixamorig:LeftLeg
-    100032: mixamorig:LeftShoulder
-    100034: mixamorig:LeftToe_End
-    100036: mixamorig:LeftToeBase
-    100038: mixamorig:LeftUpLeg
-    100040: mixamorig:Neck
-    100042: mixamorig:RightArm
-    100044: mixamorig:RightFoot
-    100046: mixamorig:RightForeArm
-    100048: mixamorig:RightHand
-    100050: mixamorig:RightHandIndex1
-    100052: mixamorig:RightHandIndex2
-    100054: mixamorig:RightHandIndex3
-    100056: mixamorig:RightHandIndex4
-    100058: mixamorig:RightLeg
-    100060: mixamorig:RightShoulder
-    100062: mixamorig:RightToe_End
-    100064: mixamorig:RightToeBase
-    100066: mixamorig:RightUpLeg
-    100068: mixamorig:Spine
-    100070: mixamorig:Spine1
-    100072: mixamorig:Spine2
-    100074: nogi
-    100076: opaska
-    100078: pasted__pCube8
-    100080: pSphere1
-    100082: pSphere2
-    100084: pSphere3
-    100086: pSphere4
-    100088: pSphere5
-    100090: tulow
+    100006: mixamorig:Head
+    100008: mixamorig:HeadTop_End
+    100010: mixamorig:Hips
+    100012: mixamorig:LeftArm
+    100014: mixamorig:LeftFoot
+    100016: mixamorig:LeftForeArm
+    100018: mixamorig:LeftHand
+    100020: mixamorig:LeftHandIndex1
+    100022: mixamorig:LeftHandIndex2
+    100024: mixamorig:LeftHandIndex3
+    100026: mixamorig:LeftHandIndex4
+    100028: mixamorig:LeftLeg
+    100030: mixamorig:LeftShoulder
+    100032: mixamorig:LeftToe_End
+    100034: mixamorig:LeftToeBase
+    100036: mixamorig:LeftUpLeg
+    100038: mixamorig:Neck
+    100040: mixamorig:RightArm
+    100042: mixamorig:RightFoot
+    100044: mixamorig:RightForeArm
+    100046: mixamorig:RightHand
+    100048: mixamorig:RightHandIndex1
+    100050: mixamorig:RightHandIndex2
+    100052: mixamorig:RightHandIndex3
+    100054: mixamorig:RightHandIndex4
+    100056: mixamorig:RightLeg
+    100058: mixamorig:RightShoulder
+    100060: mixamorig:RightToe_End
+    100062: mixamorig:RightToeBase
+    100064: mixamorig:RightUpLeg
+    100066: mixamorig:Spine
+    100068: mixamorig:Spine1
+    100070: mixamorig:Spine2
+    100072: nogi
+    100074: opaska
+    100076: pasted__pCube8
+    100078: pSphere1
+    100080: pSphere2
+    100082: pSphere3
+    100084: pSphere4
+    100086: pSphere5
+    100088: tulow
     400000: //RootNode
     400002: glowa
     400004: group
-    400006: imagePlane1
-    400008: mixamorig:Head
-    400010: mixamorig:HeadTop_End
-    400012: mixamorig:Hips
-    400014: mixamorig:LeftArm
-    400016: mixamorig:LeftFoot
-    400018: mixamorig:LeftForeArm
-    400020: mixamorig:LeftHand
-    400022: mixamorig:LeftHandIndex1
-    400024: mixamorig:LeftHandIndex2
-    400026: mixamorig:LeftHandIndex3
-    400028: mixamorig:LeftHandIndex4
-    400030: mixamorig:LeftLeg
-    400032: mixamorig:LeftShoulder
-    400034: mixamorig:LeftToe_End
-    400036: mixamorig:LeftToeBase
-    400038: mixamorig:LeftUpLeg
-    400040: mixamorig:Neck
-    400042: mixamorig:RightArm
-    400044: mixamorig:RightFoot
-    400046: mixamorig:RightForeArm
-    400048: mixamorig:RightHand
-    400050: mixamorig:RightHandIndex1
-    400052: mixamorig:RightHandIndex2
-    400054: mixamorig:RightHandIndex3
-    400056: mixamorig:RightHandIndex4
-    400058: mixamorig:RightLeg
-    400060: mixamorig:RightShoulder
-    400062: mixamorig:RightToe_End
-    400064: mixamorig:RightToeBase
-    400066: mixamorig:RightUpLeg
-    400068: mixamorig:Spine
-    400070: mixamorig:Spine1
-    400072: mixamorig:Spine2
-    400074: nogi
-    400076: opaska
-    400078: pasted__pCube8
-    400080: pSphere1
-    400082: pSphere2
-    400084: pSphere3
-    400086: pSphere4
-    400088: pSphere5
-    400090: tulow
-    2100000: initialShadingGroup2
-    2100002: initialShadingGroup
+    400006: mixamorig:Head
+    400008: mixamorig:HeadTop_End
+    400010: mixamorig:Hips
+    400012: mixamorig:LeftArm
+    400014: mixamorig:LeftFoot
+    400016: mixamorig:LeftForeArm
+    400018: mixamorig:LeftHand
+    400020: mixamorig:LeftHandIndex1
+    400022: mixamorig:LeftHandIndex2
+    400024: mixamorig:LeftHandIndex3
+    400026: mixamorig:LeftHandIndex4
+    400028: mixamorig:LeftLeg
+    400030: mixamorig:LeftShoulder
+    400032: mixamorig:LeftToe_End
+    400034: mixamorig:LeftToeBase
+    400036: mixamorig:LeftUpLeg
+    400038: mixamorig:Neck
+    400040: mixamorig:RightArm
+    400042: mixamorig:RightFoot
+    400044: mixamorig:RightForeArm
+    400046: mixamorig:RightHand
+    400048: mixamorig:RightHandIndex1
+    400050: mixamorig:RightHandIndex2
+    400052: mixamorig:RightHandIndex3
+    400054: mixamorig:RightHandIndex4
+    400056: mixamorig:RightLeg
+    400058: mixamorig:RightShoulder
+    400060: mixamorig:RightToe_End
+    400062: mixamorig:RightToeBase
+    400064: mixamorig:RightUpLeg
+    400066: mixamorig:Spine
+    400068: mixamorig:Spine1
+    400070: mixamorig:Spine2
+    400072: nogi
+    400074: opaska
+    400076: pasted__pCube8
+    400078: pSphere1
+    400080: pSphere2
+    400082: pSphere3
+    400084: pSphere4
+    400086: pSphere5
+    400088: tulow
+    2100000: initialShadingGroup
     4300000: tulow
     4300002: nogi
     4300004: glowa
@@ -108,6 +105,7 @@ ModelImporter:
     4300016: pSphere5
     4300018: pasted__pCube8
     4300020: group
+    7400000: mixamo.com
     9500000: //RootNode
     13700000: glowa
     13700002: group
