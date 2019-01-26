@@ -10,16 +10,6 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("michas");
     }
 
-    public void Options()
-    {
-        
-    }
-
-    public void Credits()
-    {
-        
-    }
-
     public void Exit()
     {
         Application.Quit();
