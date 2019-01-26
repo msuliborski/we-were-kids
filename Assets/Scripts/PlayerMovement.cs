@@ -39,18 +39,15 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(goKey[id]))
-        {
+        if (Input.GetKey(goKey[id])) {
             _rigidbody.velocity = transform.forward * vel;
         }
 
-        if (Input.GetKeyUp(goKey[id]))
-        {
+        if (Input.GetKeyUp(goKey[id])) {
             _rigidbody.velocity = Vector3.zero;
         }
 
-        if (Input.GetKey(leftKey[id]))
-        {
+        if (Input.GetKey(leftKey[id])) {
 			Debug.Log("kurwa down " + id);
             transform.Rotate(new Vector3(0, -1, 0) * Time.deltaTime * rot, Space.World);
         }
@@ -60,20 +57,16 @@ public class PlayerMovement : MonoBehaviour
             _rigidbody.angularVelocity = Vector3.zero;
         }
 
-        if (Input.GetKey(rightKey[id]))
-        {
+        if (Input.GetKey(rightKey[id])) {
             transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime * rot, Space.World);
         }
 
-        if (Input.GetKeyUp(rightKey[id]))
-        {
+        if (Input.GetKeyUp(rightKey[id])) {
             _rigidbody.angularVelocity = Vector3.zero;
         }
-        if (Input.GetKeyDown(actionKey[id]))
-        {
+        if (Input.GetKeyDown(actionKey[id])) {
             Quaternion parent = transform.rotation;
             Instantiate(projectile, inst.transform.position, parent);
-            //projectile.transform.rotation = inst.transform.rotation;
         }
     }
 }
