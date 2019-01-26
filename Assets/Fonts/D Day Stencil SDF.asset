@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: D Day Stencil SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: 1248765667
   material: {fileID: 21074057367584928}
-  materialHashCode: 0
+  materialHashCode: -1561646840
   fontAssetType: 1
   m_fontInfo:
     Name: D Day Stencil
     PointSize: 86
-    Scale: 0
+    Scale: 1
     CharacterCount: 97
     LineHeight: 98.9375
     Baseline: 0
     Ascender: 72.0625
-    CapHeight: 0
+    CapHeight: 58
     Descender: -17.5625
     CenterLine: 0
     SuperscriptOffset: 72.0625
@@ -34,7 +34,7 @@ MonoBehaviour:
     UnderlineThickness: 6.298828
     strikethrough: 19.818182
     strikethroughThickness: 6.298828
-    TabWidth: 0
+    TabWidth: 213.125
     Padding: 5
     AtlasWidth: 512
     AtlasHeight: 512
@@ -43,10 +43,10 @@ MonoBehaviour:
   - id: 32
     x: 6
     y: 517
-    width: 0
-    height: 0
+    width: 21.3125
+    height: 89.625
     xOffset: 0
-    yOffset: 0
+    yOffset: 72.0625
     xAdvance: 21.3125
     scale: 1
   - id: 33
@@ -1041,9 +1041,9 @@ Material:
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 1
-    - _ScaleRatioB: 1
-    - _ScaleRatioC: 1
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.6770833
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
