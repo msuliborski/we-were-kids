@@ -46,7 +46,7 @@ public class FatherController : MonoBehaviour
         for (int i = 0; i < points.transform.childCount; i++)
         {
             Vector3 patroPoint = points.transform.GetChild(i).position;
-            _patrolPositions.Add(new Vector3(patroPoint.x, 5.165674f, patroPoint.z));
+            _patrolPositions.Add(new Vector3(patroPoint.x, 5.143333f, patroPoint.z));
         }
         Debug.Log("Count: " + _patrolPositions.Count);
         _currentTarget = _patrolPositions[0];
