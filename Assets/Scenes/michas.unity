@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44519538, g: 0.49481297, b: 0.5738595, a: 1}
+  m_IndirectSpecularColor: {r: 0.44519627, g: 0.49481344, b: 0.5738601, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -907,7 +907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb4717e492548d7d8f90e429e262cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rot: 2
+  ang: 0
   scl: 0.01
   max: 1.4
   min: 0.6
@@ -1134,7 +1134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb4717e492548d7d8f90e429e262cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rot: 2
+  ang: 0
   scl: 0.01
   max: 1.4
   min: 0.6
@@ -1860,7 +1860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb4717e492548d7d8f90e429e262cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rot: 2
+  ang: 0
   scl: 0.01
   max: 1.4
   min: 0.6
@@ -2254,7 +2254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb4717e492548d7d8f90e429e262cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rot: 2
+  ang: 0
   scl: 0.01
   max: 1.4
   min: 0.6
@@ -2651,7 +2651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb4717e492548d7d8f90e429e262cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rot: 2
+  ang: 0
   scl: 0.01
   max: 1.4
   min: 0.6
@@ -3216,7 +3216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb4717e492548d7d8f90e429e262cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rot: 2
+  ang: 2
   scl: 0.01
   max: 1.4
   min: 0.6
@@ -3432,7 +3432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb4717e492548d7d8f90e429e262cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rot: 2
+  ang: 0
   scl: 0.01
   max: 1.4
   min: 0.6
@@ -4084,14 +4084,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 25
       objectReference: {fileID: 0}
-    - target: {fileID: 100078, guid: f423e5434f444040bb9cd53d5c6828e4, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 100096, guid: f423e5434f444040bb9cd53d5c6828e4, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 400110, guid: f423e5434f444040bb9cd53d5c6828e4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.373
@@ -4115,6 +4107,14 @@ PrefabInstance:
     - target: {fileID: 400138, guid: f423e5434f444040bb9cd53d5c6828e4, type: 3}
       propertyPath: m_LocalPosition.z
       value: 3.394
+      objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: f423e5434f444040bb9cd53d5c6828e4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100096, guid: f423e5434f444040bb9cd53d5c6828e4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f423e5434f444040bb9cd53d5c6828e4, type: 3}
@@ -4570,7 +4570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb4717e492548d7d8f90e429e262cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rot: 2
+  ang: 0
   scl: 0.01
   max: 1.4
   min: 0.6
@@ -4736,7 +4736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb4717e492548d7d8f90e429e262cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rot: 2
+  ang: 0
   scl: 0.01
   max: 1.4
   min: 0.6
@@ -4843,7 +4843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb4717e492548d7d8f90e429e262cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rot: 2
+  ang: 0
   scl: 0.01
   max: 1.4
   min: 0.6
