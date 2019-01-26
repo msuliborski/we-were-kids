@@ -1,27 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2018.2/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2018.2/system/resharper-host/local/Transient/ReSharperHost/v182/SolutionCaches/_lgj-2019.-1875433814.00" t="ExcludeRecursive" />
-    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+    <e p="C:\Users\Michał\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Michał\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_lgj-2019.-1662372477.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Michał\Desktop\We were children once... And Young\lgj-2019" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="NavMeshComponents" t="Include">
-          <e p="Editor" t="Include">
-            <e p="NavMeshComponentsGUIUtility.cs" t="Include" />
-            <e p="NavMeshLinkEditor.cs" t="Include" />
-            <e p="NavMeshModifierEditor.cs" t="Include" />
-            <e p="NavMeshModifierVolumeEditor.cs" t="Include" />
-            <e p="NavMeshSurfaceEditor.cs" t="Include" />
-          </e>
-          <e p="Scripts" t="Include">
-            <e p="NavMeshLink.cs" t="Include" />
-            <e p="NavMeshModifier.cs" t="Include" />
-            <e p="NavMeshModifierVolume.cs" t="Include" />
-            <e p="NavMeshSurface.cs" t="Include" />
-          </e>
-        </e>
         <e p="PostProcessing" t="Include">
           <e p="Editor" t="Include">
             <e p="Attributes" t="Include">
@@ -104,9 +89,9 @@
               <e p="EyeAdaptation.cginc" t="Include" />
               <e p="EyeAdaptation.shader" t="Include" />
               <e p="EyeHistogram.compute" t="Include" />
+              <e p="Fog.shader" t="Include" />
               <e p="FXAA.shader" t="Include" />
               <e p="FXAA3.cginc" t="Include" />
-              <e p="Fog.shader" t="Include" />
               <e p="GrainGen.shader" t="Include" />
               <e p="LutGen.shader" t="Include" />
               <e p="MotionBlur.cginc" t="Include" />
@@ -184,24 +169,22 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="Bullet.cs" t="Include" />
-          <e p="Flag.cs" t="Include" />
-          <e p="Pathfinding" t="Include">
-            <e p="Direction.cs" t="Include" />
-            <e p="Field.cs" t="Include" />
-            <e p="FieldGenerator.cs" t="Include" />
+          <e p="Child Controller" t="Include">
+            <e p="ChildController.cs" t="Include" />
           </e>
-          <e p="PlayerMovement.cs" t="Include" />
-          <e p="test.cs" t="Include" />
+          <e p="Father" t="Include">
+            <e p="FatherController.cs" t="Include" />
+          </e>
+          <e p="Flag.cs" t="Include" />
         </e>
       </e>
+      <e p="lgj-2019.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
       <e p="Temp" t="ExcludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
       </e>
-      <e p="lgj-2019.sln" t="IncludeFlat" />
-      <e p="obj" t="ExcludeRecursive" />
-      <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>
 </project>

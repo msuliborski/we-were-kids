@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject projectile;
     private GameObject inst;
 
-    [SerializeField] public int id = 0;
+    [SerializeField] public int id;
 
     private Rigidbody _rigidbody;
 
@@ -23,16 +23,17 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-		inst = GameObject.Find("Inst");
+		inst = transform.GetChild(0).gameObject;
 
 		goKey.Add(0, KeyCode.W);
-		goKey.Add(1, KeyCode.UpArrow);
+		goKey.Add(1, KeyCode.I);
 		leftKey.Add(0, KeyCode.A);
-		leftKey.Add(1, KeyCode.LeftArrow);
+		leftKey.Add(1, KeyCode.J);
 		rightKey.Add(0, KeyCode.D);
-		rightKey.Add(1, KeyCode.RightArrow);
+		rightKey.Add(1, KeyCode.L);
 		actionKey.Add(0, KeyCode.Space);
 		actionKey.Add(1, KeyCode.Period);
+		Debug.Log(id);
     }
 
     // Update is called once per frame
@@ -50,11 +51,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(leftKey[id]))
         {
+			Debug.Log("kurwa down " + id);
             transform.Rotate(new Vector3(0, -1, 0) * Time.deltaTime * rot, Space.World);
         }
 
-        if (Input.GetKeyUp(leftKey[id]))
-        {
+        if (Input.GetKeyUp(leftKey[id])){
+			Debug.Log("kurwa up " + id);
             _rigidbody.angularVelocity = Vector3.zero;
         }
 
