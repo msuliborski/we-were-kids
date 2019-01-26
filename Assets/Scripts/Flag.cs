@@ -13,12 +13,5 @@ public class Flag : MonoBehaviour
                 transform.Translate(Vector3.up * Time.deltaTime);
             }
         }
-        else if (Input.GetKey(KeyCode.E))
-        {
-            if (transform.position.y > 0)
-            {
-                transform.Translate(Vector3.down * Time.deltaTime);
-            }
-        }
     }
 }
