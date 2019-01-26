@@ -11,57 +11,29 @@ public class test : MonoBehaviour
     [SerializeField] private GameObject projectile;
     private GameObject inst;
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         inst = transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (id == 0)
-        {
-            Vector3 dir = Vector3.zero;
-            dir.x = Input.GetAxis("LeftVertical0");
-            dir.z = Input.GetAxis("LeftHorizontal0");
-            GetComponent<Rigidbody>().velocity = dir.normalized*vel;
-    
-            float rotationX = Input.GetAxis("RightHorizontal0");
-            float rotationY = -Input.GetAxis("RightVertical0");
+    void Update() {
+        Vector3 dir = Vector3.zero;
+        dir.x = Input.GetAxis("LeftVertical"+id);
+        dir.z = Input.GetAxis("LeftHorizontal"+id);
+        GetComponent<Rigidbody>().velocity = dir.normalized*vel;
 
-            if (rotationX != 0)
-            {
-                Vector3 look = new Vector3(rotationX, 0, rotationY);
-                transform.rotation = Quaternion.LookRotation(look);
-            }
+        float rotationX = Input.GetAxis("RightHorizontal"+id);
+        float rotationY = -Input.GetAxis("RightVertical"+id);
 
-            if (Math.Abs(Input.GetAxis("Fire0")) > 0.5)
-            {
-                Quaternion parent = transform.rotation;
-                Instantiate(projectile, inst.transform.position, parent);
-            }
+        if (rotationX != 0) {
+            Vector3 look = new Vector3(rotationX, 0, rotationY);
+            transform.rotation = Quaternion.LookRotation(look);
         }
-        else
-        {
-            Vector3 dir = Vector3.zero;
-            dir.x = Input.GetAxis("LeftVertical1");
-            dir.z = Input.GetAxis("LeftHorizontal1");
-            GetComponent<Rigidbody>().velocity = dir.normalized*vel;
-    
-            float rotationX = Input.GetAxis("RightHorizontal1");
-            float rotationY = -Input.GetAxis("RightVertical1");
 
-            if (rotationX != 0)
-            {
-                Vector3 look = new Vector3(rotationX, 0, rotationY);
-                transform.rotation = Quaternion.LookRotation(look);
-            }
-
-            if (Math.Abs(Input.GetAxis("Fire1")) > 0.5)
-            {
-                Quaternion parent = transform.rotation;
-                Instantiate(projectile, inst.transform.position, parent);
-            }
+        if (Math.Abs(Input.GetAxis("Fire"+id)) > 0.5) {
+            Quaternion parent = transform.rotation;
+            Instantiate(projectile, inst.transform.position, parent);
         }
+
     }
 }
