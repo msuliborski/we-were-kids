@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class test : MonoBehaviour
 {
+    [SerializeField] private int id;
     [SerializeField] private float vel;
     [SerializeField] private float rot;
     [SerializeField] private GameObject projectile;
@@ -12,35 +13,55 @@ public class test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inst = GameObject.Find("Inst");
+        inst = transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        Vector3 dir = Vector3.zero;
-        dir.x = Input.GetAxis("LeftVertical1");
-        dir.z = Input.GetAxis("LeftHorizontal1");
-        GetComponent<Rigidbody>().velocity = dir.normalized*vel;
-        
-//        Vector3 r = Vector3.zero;
-//        r.y = Input.GetAxis("RightHorizontal1");
-//        transform.Rotate(r * Time.deltaTime * rot, Space.World);
-        float rotationX = Input.GetAxis("RightHorizontal1");
-        float rotationY = -Input.GetAxis("RightVertical1");
-
-        if (rotationX != 0)
+        if (id == 0)
         {
-            Vector3 look = new Vector3(rotationX, 0, rotationY);
-            transform.rotation = Quaternion.LookRotation(look);
-        }
+            Vector3 dir = Vector3.zero;
+            dir.x = Input.GetAxis("LeftVertical0");
+            dir.z = Input.GetAxis("LeftHorizontal0");
+            GetComponent<Rigidbody>().velocity = dir.normalized*vel;
+    
+            float rotationX = Input.GetAxis("RightHorizontal0");
+            float rotationY = -Input.GetAxis("RightVertical0");
 
-        if (Math.Abs(Input.GetAxis("Fire1")) > 0.5)
-        {
-            Quaternion parent = transform.rotation;
-            Instantiate(projectile, inst.transform.position, parent);
+            if (rotationX != 0)
+            {
+                Vector3 look = new Vector3(rotationX, 0, rotationY);
+                transform.rotation = Quaternion.LookRotation(look);
+            }
+
+            if (Math.Abs(Input.GetAxis("Fire0")) > 0.5)
+            {
+                Quaternion parent = transform.rotation;
+                Instantiate(projectile, inst.transform.position, parent);
+            }
         }
-        
+        else
+        {
+            Vector3 dir = Vector3.zero;
+            dir.x = Input.GetAxis("LeftVertical1");
+            dir.z = Input.GetAxis("LeftHorizontal1");
+            GetComponent<Rigidbody>().velocity = dir.normalized*vel;
+    
+            float rotationX = Input.GetAxis("RightHorizontal1");
+            float rotationY = -Input.GetAxis("RightVertical1");
+
+            if (rotationX != 0)
+            {
+                Vector3 look = new Vector3(rotationX, 0, rotationY);
+                transform.rotation = Quaternion.LookRotation(look);
+            }
+
+            if (Math.Abs(Input.GetAxis("Fire1")) > 0.5)
+            {
+                Quaternion parent = transform.rotation;
+                Instantiate(projectile, inst.transform.position, parent);
+            }
+        }
     }
 }
