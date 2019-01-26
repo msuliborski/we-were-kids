@@ -32,7 +32,7 @@ public class PlayerHandler : MonoBehaviour {
     }
 
     // Update is called once per frame
-    private void Update() {
+    private void FixedUpdate() {
 
         
 
@@ -50,12 +50,10 @@ public class PlayerHandler : MonoBehaviour {
         var rotationX = Input.GetAxis("RightHorizontal" + id);
         var rotationY = -Input.GetAxis("RightVertical" + id);
 
-        if (rotationX < -0.1 || rotationX > 0.1) {
+        if (rotationX < 0 || rotationX > 0 || rotationY < 0 || rotationY > 0) {
             var look = new Vector3(rotationX, 0, rotationY);
             transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(look),0.3f);
-        } else {
-            _rigidbody.angularVelocity = Vector3.zero;
-        }
+        } 
         #if UNITY_STANDALONE_WIN
         if (Input.GetAxis("FireW" + id) > 0.5) {
             if (weapon) weapon.Fire();
