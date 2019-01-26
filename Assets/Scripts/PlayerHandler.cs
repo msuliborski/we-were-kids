@@ -9,6 +9,9 @@ public class test : MonoBehaviour
     [SerializeField] private float vel;
     [SerializeField] private float rot;
     [SerializeField] private GameObject projectile;
+
+    private static bool holdingWeapon = false;
+    
     private GameObject inst;
     // Start is called before the first frame update
     void Start() {
