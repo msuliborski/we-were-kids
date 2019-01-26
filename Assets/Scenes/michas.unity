@@ -171,6 +171,7 @@ MonoBehaviour:
   rot: 0
   onIce: 0
   ouch: {fileID: 8300000, guid: 8752a7946619a48f8bea4bc99f374394, type: 3}
+  pickup: {fileID: 8300000, guid: 780f45e11ae643288a30d17410862a23, type: 3}
   holdingWeapon: 0
   weapon: {fileID: 0}
   grenade: {fileID: 0}
@@ -397,7 +398,6 @@ MonoBehaviour:
   owner: {fileID: 0}
   shootCooldown: 0
   shot: {fileID: 8300000, guid: 4c45d16b31be09e5c9a841fd801b4e93, type: 3}
-  pickup: {fileID: 8300000, guid: 780f45e11ae643288a30d17410862a23, type: 3}
   projectile: {fileID: 8709905363783251462, guid: 4f631f579af9121c7b396132e33f2c59,
     type: 3}
 --- !u!65 &393579415
@@ -1311,7 +1311,6 @@ MonoBehaviour:
   owner: {fileID: 0}
   shootCooldown: 0
   shot: {fileID: 8300000, guid: 34d18b62e4253ec00b535672de27ebf4, type: 3}
-  pickup: {fileID: 8300000, guid: 780f45e11ae643288a30d17410862a23, type: 3}
   projectile: {fileID: 8709905363783251462, guid: 4f631f579af9121c7b396132e33f2c59,
     type: 3}
 --- !u!82 &661066586
@@ -1517,7 +1516,6 @@ MonoBehaviour:
   owner: {fileID: 0}
   shootCooldown: 0
   shot: {fileID: 8300000, guid: fced3cdbb963dbf5d94f47181dc93bfe, type: 3}
-  pickup: {fileID: 8300000, guid: 780f45e11ae643288a30d17410862a23, type: 3}
   projectile: {fileID: 8709905363783251462, guid: 4f631f579af9121c7b396132e33f2c59,
     type: 3}
 --- !u!82 &1087638192
@@ -2638,6 +2636,7 @@ MonoBehaviour:
   rot: 0
   onIce: 0
   ouch: {fileID: 8300000, guid: 8752a7946619a48f8bea4bc99f374394, type: 3}
+  pickup: {fileID: 8300000, guid: 780f45e11ae643288a30d17410862a23, type: 3}
   holdingWeapon: 0
   weapon: {fileID: 0}
   grenade: {fileID: 0}

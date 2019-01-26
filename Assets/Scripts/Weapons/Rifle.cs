@@ -7,14 +7,12 @@ using UnityEngine;
 public class Rifle : PickUp
 {
     [SerializeField] private AudioClip shot;
-    [SerializeField] private AudioClip pickup;
     private AudioSource source;
     public GameObject projectile;
     private bool play = true;
     void Start() {
         shootCooldown = 0.3f;
         source = GetComponent<AudioSource>();
-        source.clip = pickup;
     }
 
     // Update is called once per frame

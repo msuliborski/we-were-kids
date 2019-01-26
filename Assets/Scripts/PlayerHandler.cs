@@ -9,6 +9,7 @@ public class PlayerHandler : MonoBehaviour {
     [SerializeField] private float rot;
     [SerializeField] private bool onIce = false;
     [SerializeField] private AudioClip ouch;
+    [SerializeField] private AudioClip pickup;
     private AudioSource source;
     
     
@@ -28,7 +29,6 @@ public class PlayerHandler : MonoBehaviour {
         _rigidbody = GetComponent<Rigidbody>();
         inst = transform.GetChild(0).gameObject;
         source = GetComponent<AudioSource>();
-        source.clip = ouch;
     }
 
     // Update is called once per frame
@@ -70,6 +70,7 @@ public class PlayerHandler : MonoBehaviour {
 //            var hit = collision.contacts[0]; 
             //var rot = Quaternion.FromToRotation(Vector3.up, hit.normal);
             //Instantiate (explosionPrefab, hit.point, rot);
+            source.clip = ouch;
             source.PlayOneShot(source.clip);
             Destroy (collision.gameObject);
             hp -= 10;
@@ -78,6 +79,8 @@ public class PlayerHandler : MonoBehaviour {
             PickUp rifleScript = collision.gameObject.GetComponent<PickUp>();
             if(!rifleScript.isPickedUp) {
                 if (weapon != null) Destroy(weapon.gameObject);
+                source.clip = pickup;
+                source.PlayOneShot(source.clip);
                 rifleScript.owner = gameObject;
                 weapon = rifleScript;
                 holdingWeapon = true;
