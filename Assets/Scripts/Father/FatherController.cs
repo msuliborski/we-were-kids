@@ -66,7 +66,6 @@ public class FatherController : MonoBehaviour
             {
                 if (transform.position == _currentTarget)
                 {
-                    Debug.Log("kureaaaa!!!");
                     //_agent.Stop();
                     _isWaiting = true;
                 }
@@ -77,7 +76,6 @@ public class FatherController : MonoBehaviour
                 _isWaitingTimer -= Time.deltaTime;
                 if (_isWaitingTimer <= 0f)
                 {
-                   Debug.Log("endOfTimer");
                    _isWaiting = false;
                    _isWaitingTimer = 1.5f;
                    _currentTarget = RandomDest();
@@ -101,18 +99,9 @@ public class FatherController : MonoBehaviour
     
     Vector3 RandomDest()
     {
-        Debug.Log("RANDOM");
-        //Vector3 random = _currentTarget;
         _patrolPositions.Remove(_currentTarget);
-        //while (random == _currentTarget)
-        //{
-            
-        //    
-        //}
-        
         int index = Random.Range(0, _patrolPositions.Count);
         Vector3 random = _patrolPositions[index];
-        
         _patrolPositions.Add(_currentTarget);
         return random;
     }
