@@ -215,13 +215,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37202581}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72f32400b05e254209af7b730d7022eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   vel: 5
   rot: 150
+  projectile: {fileID: 0}
+  id: 0
 --- !u!54 &37202587
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -247,13 +249,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 37202581}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e117deddcf9b27afb9abdf85baf600fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 51faf20cd9c4febb8bd067327df5c752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vel: 5
+  rot: 150
   projectile: {fileID: 8709905363783251462, guid: 4f631f579af9121c7b396132e33f2c59,
     type: 3}
-  inst: {fileID: 976203520}
-  vel: 10
 --- !u!1 &132962218
 GameObject:
   m_ObjectHideFlags: 0

@@ -40,7 +40,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(goKey[id]))
         {
-            
             _rigidbody.velocity = transform.forward * vel;
         }
 
