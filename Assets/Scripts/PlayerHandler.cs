@@ -82,6 +82,12 @@ public class PlayerHandler : MonoBehaviour {
             if (onIce) _rigidbody.AddForce(dir.normalized * vel);
             else _rigidbody.velocity = dir.normalized * vel;
         }
+        
+        if(Math.Abs(_rigidbody.velocity.magnitude) > 0.1)
+            model.GetComponent<Animator>().SetBool("running", true);
+        else
+            model.GetComponent<Animator>().SetBool("running", false);
+        
 
         var rotationX = Input.GetAxis("RightHorizontal" + id);
         var rotationY = -Input.GetAxis("RightVertical" + id);

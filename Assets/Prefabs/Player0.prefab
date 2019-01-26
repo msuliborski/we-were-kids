@@ -165,6 +165,7 @@ MonoBehaviour:
   holdingWeapon: 0
   weapon: {fileID: 0}
   grenade: {fileID: 0}
+  hp: 100
 --- !u!82 &2025477995473474969
 AudioSource:
   m_ObjectHideFlags: 0
@@ -331,7 +332,15 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: cfe4419690a3cdb48b16eba2b16604a1, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: a9d1b1ac08f718847b9341676b08f4c7, type: 2}
+      objectReference: {fileID: 9100000, guid: 0cf4c538dc9a11c4180b6a259dc5e843, type: 2}
+    - target: {fileID: 400038, guid: cfe4419690a3cdb48b16eba2b16604a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0045631253
+      objectReference: {fileID: 0}
+    - target: {fileID: 400038, guid: cfe4419690a3cdb48b16eba2b16604a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.006413749
+      objectReference: {fileID: 0}
     - target: {fileID: 13700010, guid: cfe4419690a3cdb48b16eba2b16604a1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -388,6 +397,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 65b21a4235f26b04693685fb887c5606, type: 2}
+    - target: {fileID: 400060, guid: cfe4419690a3cdb48b16eba2b16604a1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5649627
+      objectReference: {fileID: 0}
+    - target: {fileID: 400060, guid: cfe4419690a3cdb48b16eba2b16604a1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.4276941
+      objectReference: {fileID: 0}
+    - target: {fileID: 400060, guid: cfe4419690a3cdb48b16eba2b16604a1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5584276
+      objectReference: {fileID: 0}
+    - target: {fileID: 400060, guid: cfe4419690a3cdb48b16eba2b16604a1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4313394
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfe4419690a3cdb48b16eba2b16604a1, type: 3}
 --- !u!4 &5438932800008549070 stripped
