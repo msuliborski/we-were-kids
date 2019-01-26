@@ -8,7 +8,8 @@ public class PlayerHandler : MonoBehaviour {
     [SerializeField] private float vel;
     [SerializeField] private float rot;
     [SerializeField] private bool onIce = false;
-
+    [SerializeField] private AudioClip ouch;
+    private AudioSource source;
     
     
     
@@ -26,6 +27,8 @@ public class PlayerHandler : MonoBehaviour {
     private void Start() {
         _rigidbody = GetComponent<Rigidbody>();
         inst = transform.GetChild(0).gameObject;
+        source = GetComponent<AudioSource>();
+        source.clip = ouch;
     }
 
     // Update is called once per frame
@@ -67,6 +70,7 @@ public class PlayerHandler : MonoBehaviour {
 //            var hit = collision.contacts[0]; 
             //var rot = Quaternion.FromToRotation(Vector3.up, hit.normal);
             //Instantiate (explosionPrefab, hit.point, rot);
+            source.PlayOneShot(source.clip);
             Destroy (collision.gameObject);
             hp -= 10;
         }

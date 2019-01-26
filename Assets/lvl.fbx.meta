@@ -83,6 +83,7 @@ ModelImporter:
     2000006: left
     2000008: right1
     2100000: lambert1
+    2100002: floor
     2300000: pCube1
     2300002: pCube10
     2300004: pCube2
