@@ -69,7 +69,7 @@ public class FatherController : MonoBehaviour
            if (!_isWaiting)
           
             {
-                if (transform.position == _currentTarget)
+                if (Mathf.Approximately(transform.position.x, _currentTarget.x) && Mathf.Approximately(transform.position.z, _currentTarget.z))
                 {
                     //_agent.Stop();
                     _isWaiting = true;
