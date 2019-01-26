@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b081b9acce671840aab1878083315166
+guid: c6f4c1b6f77ba8a488e16763034c6474
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -41,9 +41,9 @@ ModelImporter:
     100070: mixamorig:Spine
     100072: mixamorig:Spine1
     100074: mixamorig:Spine2
-    100076: //RootNode
-    100078: persp1
-    100080: portki
+    100076: persp1
+    100078: portki
+    100080: //RootNode
     100082: tolow
     100084: was1
     100086: was2
@@ -86,9 +86,9 @@ ModelImporter:
     400070: mixamorig:Spine
     400072: mixamorig:Spine1
     400074: mixamorig:Spine2
-    400076: //RootNode
-    400078: persp1
-    400080: portki
+    400076: persp1
+    400078: portki
+    400080: //RootNode
     400082: tolow
     400084: was1
     400086: was2
@@ -104,7 +104,7 @@ ModelImporter:
     4300010: portki
     4300012: was1
     4300014: glowa
-    7400000: Running
+    7400000: mixamo.com
     9500000: //RootNode
     13700000: glowa
     13700002: kapec1
@@ -142,35 +142,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Running
-      takeName: mixamo.com
-      firstFrame: 0
-      lastFrame: 33
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
