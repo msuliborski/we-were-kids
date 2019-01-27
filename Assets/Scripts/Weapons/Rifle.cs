@@ -7,8 +7,10 @@ using UnityEngine;
 public class Rifle : PickUp
 {
     [SerializeField] private AudioClip shot;
+    [SerializeField] private AudioClip noAmmo;
     private AudioSource source;
     public GameObject projectile;
+    public int ammo = 50;
     private bool play = true;
     void Start() {
         shootCooldown = 0.2f;
@@ -34,12 +36,16 @@ public class Rifle : PickUp
     }
     
     public override void Fire() {
-        if (Math.Abs(shootCooldown) < 0.01) {
+        if (Math.Abs(shootCooldown) < 0.01 && ammo > 0) {
             var parent = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 90, transform.rotation.eulerAngles.z);
             Instantiate(projectile, owner.transform.GetChild(0).gameObject.transform.position, parent);
             source.clip = shot;    
             source.PlayOneShot(source.clip);
             shootCooldown = 0.2f;
+            ammo -= 1;
+        } else {
+            source.clip = noAmmo;
+            source.PlayOneShot(source.clip);
         }
     }
     

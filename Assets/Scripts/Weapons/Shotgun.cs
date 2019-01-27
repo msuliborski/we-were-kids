@@ -6,8 +6,10 @@ using UnityEngine;
 public class Shotgun : PickUp
 {
     [SerializeField] private AudioClip shot;
+    [SerializeField] private AudioClip noAmmo;
     private AudioSource source;
     public GameObject projectile;
+    public int ammo = 60;
     private bool play = true;
     void Start() {
         shootCooldown = 1.2f;
@@ -31,12 +33,12 @@ public class Shotgun : PickUp
     }
     
     public override void Fire() {
-        if (Math.Abs(shootCooldown) < 0.01) {
-            var ang1 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 86, transform.rotation.eulerAngles.z);
-            var ang2 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 88, transform.rotation.eulerAngles.z);
-            var ang3 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 90, transform.rotation.eulerAngles.z);
-            var ang4 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 92, transform.rotation.eulerAngles.z);
-            var ang5 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 94, transform.rotation.eulerAngles.z);
+        if (Math.Abs(shootCooldown) < 0.01 && ammo >= 5) {
+            var ang1 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 176, transform.rotation.eulerAngles.z);
+            var ang2 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 178, transform.rotation.eulerAngles.z);
+            var ang3 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 180, transform.rotation.eulerAngles.z);
+            var ang4 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 182, transform.rotation.eulerAngles.z);
+            var ang5 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 184, transform.rotation.eulerAngles.z);
             var pos1 = new Vector3(owner.transform.GetChild(0).gameObject.transform.position.x, owner.transform.GetChild(0).gameObject.transform.position.y-4, owner.transform.GetChild(0).gameObject.transform.position.z);
             var pos2 = new Vector3(owner.transform.GetChild(0).gameObject.transform.position.x, owner.transform.GetChild(0).gameObject.transform.position.y-2, owner.transform.GetChild(0).gameObject.transform.position.z);
             var pos3 = new Vector3(owner.transform.GetChild(0).gameObject.transform.position.x, owner.transform.GetChild(0).gameObject.transform.position.y, owner.transform.GetChild(0).gameObject.transform.position.z);
@@ -50,6 +52,10 @@ public class Shotgun : PickUp
             Instantiate(projectile, pos4, ang4);
             Instantiate(projectile, pos5, ang5);
             shootCooldown = 1.2f;
+            ammo -= 5;
+        } else {
+            source.clip = noAmmo;
+            source.PlayOneShot(source.clip);
         }
     }
     

@@ -15,7 +15,6 @@ public class PlayerHandler : MonoBehaviour {
     public GameObject spawnPoint;
     private bool died = false;
     private bool doOnce = true;
-    private float cooldown = 5;
     private Transform model;
     
     private AudioSource source;
@@ -27,9 +26,10 @@ public class PlayerHandler : MonoBehaviour {
     public PickUp weapon = null;
     public PickUp grenade;
     
-    public int hp = 100;
-    
-    
+
+    public int hp = 10;
+    public float cooldown = 5;
+
     private GameObject inst;
     private Rigidbody _rigidbody;
 
@@ -47,29 +47,35 @@ public class PlayerHandler : MonoBehaviour {
 
     // Update is called once per frame
 
+    public void doOnceWhenDead() {
+        doOnce = false;
+        if (id == 1) FatherController.player0Score++;
+        else FatherController.player1Score++; //give points (father holds 'em)
+        collider.isTrigger = true;
+        transform.GetChild(1).gameObject.SetActive(false);
+        Destroy(weapon.gameObject);
+    }
+    public void respawnAfterCooldown() {
+        died = false;
+        hp = 10;
+        transform.position = new Vector3(spawnPoint.transform.position.x, transform.position.y, spawnPoint.transform.position.z);
+        cooldown = 5;
+        collider.isTrigger = false;
+        doOnce = true;
+        transform.GetChild(1).gameObject.SetActive(true);
+    }
+
     private void FixedUpdate() {
        
         if (hp <= 0 && !died) {
-            //Debug.Log("died");
             cooldown -= Time.deltaTime;
             if (doOnce) {
-                doOnce = false;
-                if (id == 1) FatherController.player0Score++;
-                else FatherController.player1Score++; //give points (father holds 'em)
-                collider.isTrigger = true;
-                transform.GetChild(1).gameObject.SetActive(false);
-                Destroy(weapon.gameObject);
+                doOnceWhenDead();
             }
-            _rigidbody.velocity = new Vector3(0, 0, 0);
+            _rigidbody.velocity = new Vector3(0, 0, 0); //make hin no move
 
             if (cooldown <= 0) {
-                died = false;
-                hp = 100;
-                transform.position = new Vector3(spawnPoint.transform.position.x, transform.position.y, spawnPoint.transform.position.z);
-                cooldown = 5;
-                collider.isTrigger = false;
-                doOnce = true;
-                transform.GetChild(1).gameObject.SetActive(true);
+                respawnAfterCooldown();
             }
         }
         
@@ -127,13 +133,13 @@ public class PlayerHandler : MonoBehaviour {
             source.clip = ouch;
             source.PlayOneShot(source.clip);
             Destroy (collision.gameObject);
-            hp -= 10;
+            hp -= 1;
         }        
         if (collision.gameObject.CompareTag("SuperBullet")){
             source.clip = ouch;
             source.PlayOneShot(source.clip);
             Destroy (collision.gameObject);
-            hp -= 50;
+            hp -= 5;
         }
     }
 
