@@ -9,10 +9,10 @@ public class Shotgun : PickUp
     [SerializeField] private AudioClip noAmmo;
     private AudioSource source;
     public GameObject projectile;
-    public int ammo = 60;
     private bool play = true;
     void Start() {
         shootCooldown = 1.2f;
+        ammo = 60;
         source = GetComponent<AudioSource>();
     }
 
