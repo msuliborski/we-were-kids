@@ -6,8 +6,10 @@ using UnityEngine;
 public class Shotgun : PickUp
 {
     [SerializeField] private AudioClip shot;
+    [SerializeField] private AudioClip noAmmo;
     private AudioSource source;
     public GameObject projectile;
+    public int ammo = 60;
     private bool play = true;
     void Start() {
         shootCooldown = 1.2f;
@@ -31,7 +33,7 @@ public class Shotgun : PickUp
     }
     
     public override void Fire() {
-        if (Math.Abs(shootCooldown) < 0.01) {
+        if (Math.Abs(shootCooldown) < 0.01 && ammo >= 5) {
             var ang1 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 176, transform.rotation.eulerAngles.z);
             var ang2 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 178, transform.rotation.eulerAngles.z);
             var ang3 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 180, transform.rotation.eulerAngles.z);
@@ -50,6 +52,10 @@ public class Shotgun : PickUp
             Instantiate(projectile, pos4, ang4);
             Instantiate(projectile, pos5, ang5);
             shootCooldown = 1.2f;
+            ammo -= 5;
+        } else {
+            source.clip = noAmmo;
+            source.PlayOneShot(source.clip);
         }
     }
     
