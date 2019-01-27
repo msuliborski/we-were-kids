@@ -97,8 +97,10 @@ MonoBehaviour:
   owner: {fileID: 0}
   shootCooldown: 0
   shot: {fileID: 8300000, guid: 34d18b62e4253ec00b535672de27ebf4, type: 3}
+  noAmmo: {fileID: 8300000, guid: 26fc4cd6772dc583e895f6a9c07f23b9, type: 3}
   projectile: {fileID: 8709905363783251462, guid: 4f631f579af9121c7b396132e33f2c59,
     type: 3}
+  ammo: 20
 --- !u!114 &490621641315818737
 MonoBehaviour:
   m_ObjectHideFlags: 0
