@@ -22,7 +22,7 @@ public class Pistol : PickUp
                 source.PlayOneShot(source.clip);
                 play = false;
             }
-            transform.position = owner.transform.GetChild(0).position;
+            transform.position = new Vector3(owner.transform.GetChild(0).position.x, owner.transform.GetChild(0).position.y, owner.transform.GetChild(0).position.z);
             transform.rotation = owner.transform.GetChild(0).rotation;
         }
         shootCooldown -= Time.deltaTime;

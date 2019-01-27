@@ -32,11 +32,11 @@ public class Shotgun : PickUp
     
     public override void Fire() {
         if (Math.Abs(shootCooldown) < 0.01) {
-            var ang1 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 86, transform.rotation.eulerAngles.z);
-            var ang2 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 88, transform.rotation.eulerAngles.z);
-            var ang3 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 90, transform.rotation.eulerAngles.z);
-            var ang4 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 92, transform.rotation.eulerAngles.z);
-            var ang5 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 94, transform.rotation.eulerAngles.z);
+            var ang1 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 176, transform.rotation.eulerAngles.z);
+            var ang2 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 178, transform.rotation.eulerAngles.z);
+            var ang3 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 180, transform.rotation.eulerAngles.z);
+            var ang4 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 182, transform.rotation.eulerAngles.z);
+            var ang5 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 184, transform.rotation.eulerAngles.z);
             var pos1 = new Vector3(owner.transform.GetChild(0).gameObject.transform.position.x, owner.transform.GetChild(0).gameObject.transform.position.y-4, owner.transform.GetChild(0).gameObject.transform.position.z);
             var pos2 = new Vector3(owner.transform.GetChild(0).gameObject.transform.position.x, owner.transform.GetChild(0).gameObject.transform.position.y-2, owner.transform.GetChild(0).gameObject.transform.position.z);
             var pos3 = new Vector3(owner.transform.GetChild(0).gameObject.transform.position.x, owner.transform.GetChild(0).gameObject.transform.position.y, owner.transform.GetChild(0).gameObject.transform.position.z);

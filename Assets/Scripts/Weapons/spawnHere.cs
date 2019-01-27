@@ -11,7 +11,7 @@ public class spawnHere : MonoBehaviour
     private float counting;
     
     void Start() {
-        counting = 2;
+        counting = 1;
     }
 
     // Update is called once per frame
