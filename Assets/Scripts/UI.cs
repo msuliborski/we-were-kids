@@ -9,10 +9,10 @@ public class UI : MonoBehaviour
 {
     [SerializeField] private List<Sprite> sprites;
     private Image p0;
-    public TextMeshProUGUI p0points;
-    public TextMeshProUGUI p0bullets;
-    public TextMeshProUGUI p1points;
-    public TextMeshProUGUI p1bullets;
+    private TextMeshProUGUI p0points;
+    private TextMeshProUGUI p0bullets;
+    private TextMeshProUGUI p1points;
+    private TextMeshProUGUI p1bullets;
     private Image p1;
     private PlayerHandler player0;
     private PlayerHandler player1;
