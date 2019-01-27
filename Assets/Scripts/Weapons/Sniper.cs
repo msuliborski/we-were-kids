@@ -6,9 +6,11 @@ using UnityEngine;
 public class Sniper : PickUp
 {
     [SerializeField] private AudioClip shot;
+    [SerializeField] private AudioClip noAmmo;
     private AudioSource source;
     public GameObject projectile;
     private bool play = true;
+    public int ammo = 15;
     void Start() {
         shootCooldown = 2f;
         source = GetComponent<AudioSource>();
@@ -22,7 +24,7 @@ public class Sniper : PickUp
                 source.PlayOneShot(source.clip);
                 play = false;
             }
-            Quaternion rot = Quaternion.Euler(owner.transform.GetChild(0).rotation.eulerAngles.x+180, owner.transform.GetChild(0).rotation.eulerAngles.y, 90);
+            Quaternion rot = Quaternion.Euler(owner.transform.GetChild(0).rotation.eulerAngles.x, owner.transform.GetChild(0).rotation.eulerAngles.y + 180, 90);
             
             transform.position = owner.transform.GetChild(0).position;
             transform.rotation = rot;
@@ -32,13 +34,17 @@ public class Sniper : PickUp
     }
     
     public override void Fire() {
-        if (Math.Abs(shootCooldown) < 0.01) {
-            var ang1 = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 90, transform.rotation.eulerAngles.z);
+        if (Math.Abs(shootCooldown) < 0.01 && ammo > 0) {
+            var ang1 = Quaternion.Euler(transform.rotation.eulerAngles.x + 180, transform.rotation.eulerAngles.y - 90, transform.rotation.eulerAngles.z);
             var pos1 = new Vector3(owner.transform.GetChild(0).gameObject.transform.position.x, owner.transform.GetChild(0).gameObject.transform.position.y-4, owner.transform.GetChild(0).gameObject.transform.position.z);
             source.clip = shot;
             source.PlayOneShot(source.clip);
             Instantiate(projectile, pos1, ang1);
             shootCooldown = 2f;
+            ammo -= 1;
+        } else {
+            source.clip = noAmmo;
+            source.PlayOneShot(source.clip);
         }
     }
 
