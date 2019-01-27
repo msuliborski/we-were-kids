@@ -10,7 +10,7 @@ public class PlayerHandler : MonoBehaviour {
     [SerializeField] private bool onIce = false;
     [SerializeField] private AudioClip ouch;
     [SerializeField] private AudioClip pickup;
-    
+   
 
     public GameObject spawnPoint;
     private bool died = false;
@@ -36,7 +36,7 @@ public class PlayerHandler : MonoBehaviour {
     // Start is called before the first frame update
     private void Start()
     {
-        
+        cooldown = 2.3f;
         collider = GetComponent<CapsuleCollider>();
         model = transform.GetChild(1);
         anim = model.GetComponent<Animator>();
@@ -51,9 +51,9 @@ public class PlayerHandler : MonoBehaviour {
         doOnce = false;
         if (id == 1) FatherController.player0Score++;
         else FatherController.player1Score++; //give points (father holds 'em)
-        collider.isTrigger = true;
-        transform.GetChild(1).gameObject.SetActive(false);
-        Destroy(weapon.gameObject);
+        anim.SetBool("running", false);
+        anim.SetBool("death", true);
+        if (weapon) Destroy(weapon.gameObject);
     }
     public void respawnAfterCooldown() {
         died = false;
@@ -62,6 +62,7 @@ public class PlayerHandler : MonoBehaviour {
         cooldown = 5;
         collider.isTrigger = false;
         doOnce = true;
+        anim.SetBool("death", false);
         transform.GetChild(1).gameObject.SetActive(true);
     }
 
@@ -129,6 +130,8 @@ public class PlayerHandler : MonoBehaviour {
     
     
     void OnCollisionEnter (Collision collision) {
+        
+       
         if (collision.gameObject.CompareTag("Bullet")){
             source.clip = ouch;
             source.PlayOneShot(source.clip);
@@ -145,7 +148,9 @@ public class PlayerHandler : MonoBehaviour {
 
     
 
-    void OnTriggerEnter (Collider col) {
+    void OnTriggerEnter (Collider col)
+    {
+        
         if (col.gameObject.CompareTag("Ice"))
             onIce = true;
         else if(col.gameObject.CompareTag("Weapon")){
@@ -164,6 +169,8 @@ public class PlayerHandler : MonoBehaviour {
                     col.GetComponent<Sniper>().LaserActivate();
                 }
             }
+          //  else if (col.gameObject.CompareTag("Father"))
+           //     Debug.Log("chuj kurwa");
 
             
         }
@@ -175,6 +182,6 @@ public class PlayerHandler : MonoBehaviour {
             onIce = false;
         }
     }
-    
-    
+
+  
 }
