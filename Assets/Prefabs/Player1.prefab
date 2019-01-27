@@ -135,7 +135,8 @@ MonoBehaviour:
   holdingWeapon: 0
   weapon: {fileID: 0}
   grenade: {fileID: 0}
-  hp: 100
+  hp: 10
+  cooldown: 5
 --- !u!82 &5148397298800002826
 AudioSource:
   m_ObjectHideFlags: 0

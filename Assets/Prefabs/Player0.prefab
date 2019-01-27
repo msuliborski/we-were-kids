@@ -165,7 +165,8 @@ MonoBehaviour:
   holdingWeapon: 0
   weapon: {fileID: 0}
   grenade: {fileID: 0}
-  hp: 100
+  hp: 10
+  cooldown: 5
 --- !u!82 &2025477995473474969
 AudioSource:
   m_ObjectHideFlags: 0
@@ -269,10 +270,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9059443966956704337}
     m_Modifications:
-    - target: {fileID: 100004, guid: cfe4419690a3cdb48b16eba2b16604a1, type: 3}
-      propertyPath: m_Name
-      value: Ch1T-Pose
-      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: cfe4419690a3cdb48b16eba2b16604a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -328,6 +325,10 @@ PrefabInstance:
     - target: {fileID: 400004, guid: cfe4419690a3cdb48b16eba2b16604a1, type: 3}
       propertyPath: m_LocalScale.z
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: cfe4419690a3cdb48b16eba2b16604a1, type: 3}
+      propertyPath: m_Name
+      value: Ch1T-Pose
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: cfe4419690a3cdb48b16eba2b16604a1, type: 3}
       propertyPath: m_Controller
