@@ -156,7 +156,7 @@ public class PlayerHandler : MonoBehaviour {
 
             if (col.GetComponent<Sniper>())
             {
-                //col.GetComponent<Sniper>().LaserActivate();
+                col.GetComponent<Sniper>().LaserActivate();
             }
         }
     }

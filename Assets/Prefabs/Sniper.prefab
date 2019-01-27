@@ -329,7 +329,7 @@ PrefabInstance:
     - target: {fileID: 2993368216335437641, guid: c5fe55a7095a74a41a4988aa998f7b67,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.87
+      value: 2.474
       objectReference: {fileID: 0}
     - target: {fileID: 2993368216335437641, guid: c5fe55a7095a74a41a4988aa998f7b67,
         type: 3}
@@ -339,7 +339,7 @@ PrefabInstance:
     - target: {fileID: 2993368216335437641, guid: c5fe55a7095a74a41a4988aa998f7b67,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0017852783
+      value: 0.002
       objectReference: {fileID: 0}
     - target: {fileID: 2993368216335437641, guid: c5fe55a7095a74a41a4988aa998f7b67,
         type: 3}
@@ -385,6 +385,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: aim
+      objectReference: {fileID: 0}
+    - target: {fileID: 1242578628894614039, guid: c5fe55a7095a74a41a4988aa998f7b67,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7252277319908346077, guid: c5fe55a7095a74a41a4988aa998f7b67,
+        type: 3}
+      propertyPath: m_UseWorldSpace
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7252277319908346077, guid: c5fe55a7095a74a41a4988aa998f7b67,
+        type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5fe55a7095a74a41a4988aa998f7b67, type: 3}

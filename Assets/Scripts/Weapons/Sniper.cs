@@ -45,9 +45,9 @@ public class Sniper : PickUp
         transform.GetChild(1).gameObject.SetActive(true);
     }
 
-    public void LaserDectivate()
-    {
-        transform.GetChild(1).gameObject.SetActive(false);
-    }
+    //public void LaserDectivate()
+    //{
+    //    transform.GetChild(1).gameObject.SetActive(false);
+    //}
     
 }
