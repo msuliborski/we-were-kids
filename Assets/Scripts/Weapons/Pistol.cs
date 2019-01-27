@@ -12,7 +12,7 @@ public class Pistol : PickUp
     private bool play = true;
     void Start() {
         shootCooldown = 0.8f;
-        ammo = 20;
+        ammo = 30;
         source = GetComponent<AudioSource>();
     }
 
@@ -41,7 +41,7 @@ public class Pistol : PickUp
             shootCooldown = 0.8f;
             ammo -= 1;
             
-        } else if (ammo == 0) {
+        } else if (ammo == 0 && !source.isPlaying) {
             source.clip = noAmmo;
             source.PlayOneShot(source.clip);
         }
