@@ -140,6 +140,7 @@ public class PlayerHandler : MonoBehaviour {
             source.PlayOneShot(source.clip);
             Destroy (collision.gameObject);
             hp -= 5;
+            if (hp < 0) hp = 0;
         }
     }
 
