@@ -46,11 +46,16 @@ public class Shotgun : PickUp
             var pos5 = new Vector3(owner.transform.GetChild(0).gameObject.transform.position.x, owner.transform.GetChild(0).gameObject.transform.position.y+4, owner.transform.GetChild(0).gameObject.transform.position.z);
             source.clip = shot;
             source.PlayOneShot(source.clip);
-            Instantiate(projectile, pos1, ang1);
-            Instantiate(projectile, pos2, ang2);
-            Instantiate(projectile, pos3, ang3);
-            Instantiate(projectile, pos4, ang4);
-            Instantiate(projectile, pos5, ang5);
+            Instantiate(projectile, pos1, ang1, gameObject.transform);
+            transform.GetChild(transform.childCount - 1).GetComponent<Bullet>().owner = owner.GetComponent<PlayerHandler>().gameObject;
+            Instantiate(projectile, pos2, ang2, gameObject.transform);
+            transform.GetChild(transform.childCount - 1).GetComponent<Bullet>().owner = owner.GetComponent<PlayerHandler>().gameObject;
+            Instantiate(projectile, pos3, ang3, gameObject.transform);
+            transform.GetChild(transform.childCount - 1).GetComponent<Bullet>().owner = owner.GetComponent<PlayerHandler>().gameObject;
+            Instantiate(projectile, pos4, ang4, gameObject.transform);
+            transform.GetChild(transform.childCount - 1).GetComponent<Bullet>().owner = owner.GetComponent<PlayerHandler>().gameObject;
+            Instantiate(projectile, pos5, ang5, gameObject.transform);
+            transform.GetChild(transform.childCount - 1).GetComponent<Bullet>().owner = owner.GetComponent<PlayerHandler>().gameObject;
             shootCooldown = 1.2f;
             ammo -= 5;
         } else if (ammo == 0) {

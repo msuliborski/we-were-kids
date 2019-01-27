@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 490621641315818737}
   - component: {fileID: 1243291774674086524}
   - component: {fileID: 1688838330456548315}
+  - component: {fileID: 3776558396582219248}
   m_Layer: 0
   m_Name: Pistol
   m_TagString: Weapon
@@ -227,3 +228,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1293726, y: 0.05992118, z: 0.028138861}
   m_Center: {x: 0.039944556, y: -0.02605949, z: -0.0011833827}
+--- !u!114 &3776558396582219248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490621641315818751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.75686276, g: 0.5529412, b: 0.14901961, a: 1}
+  outlineWidth: 3
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

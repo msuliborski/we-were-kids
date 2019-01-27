@@ -34,11 +34,13 @@ public class Pistol : PickUp
     public override void Fire() {
         if (Math.Abs(shootCooldown) < 0.01 && ammo > 0) {
             var parent = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y - 90, transform.rotation.eulerAngles.z);
-            Instantiate(projectile, owner.transform.GetChild(0).gameObject.transform.position, parent);
+            Instantiate(projectile, owner.transform.GetChild(0).gameObject.transform.position, parent, gameObject.transform);
+            transform.GetChild(transform.childCount - 1).GetComponent<Bullet>().owner = owner.GetComponent<PlayerHandler>().gameObject;
             source.clip = shot;
             source.PlayOneShot(source.clip);
             shootCooldown = 0.8f;
             ammo -= 1;
+            
         } else if (ammo == 0) {
             source.clip = noAmmo;
             source.PlayOneShot(source.clip);

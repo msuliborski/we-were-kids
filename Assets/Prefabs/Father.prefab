@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 4868798141482500975}
   m_Layer: 8
   m_Name: Father
-  m_TagString: Untagged
+  m_TagString: Father
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -457,12 +457,12 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4868798141482500968}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 1.8113731
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.8269173
   m_Height: 5.3662477
   m_Direction: 1
-  m_Center: {x: 0.015584565, y: 0.4290436, z: 0.33636704}
+  m_Center: {x: 0.015584565, y: 0.4290436, z: 0.35191116}
 --- !u!114 &4868798141482500974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,6 +480,7 @@ MonoBehaviour:
   _isWaiting: 0
   isHuntingTimer: 10
   slap: {fileID: 8300000, guid: ebd758b3f2a32e1d2a972601fda36535, type: 3}
+  kurla: {fileID: 0}
 --- !u!195 &4868798141482500973
 NavMeshAgent:
   m_ObjectHideFlags: 0

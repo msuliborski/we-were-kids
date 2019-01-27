@@ -5,6 +5,9 @@ using UnityEngine.AI;
 
 public class FatherController : MonoBehaviour
 {
+    private PlayerHandler[] player;
+    
+    
     [SerializeField]
     private Vector3 _currentTarget;
     private NavMeshAgent _agent;
@@ -24,6 +27,7 @@ public class FatherController : MonoBehaviour
     public static int player1Score = 0;
 
     [SerializeField] private AudioClip slap;
+    [SerializeField] private AudioClip kurla;
     private AudioSource source;
 
     
@@ -52,7 +56,7 @@ public class FatherController : MonoBehaviour
     
     void Start()
     {
-
+        player = new[] {GameObject.Find("Player0").GetComponent<PlayerHandler>(), GameObject.Find("Player1").GetComponent<PlayerHandler>()};
         model = transform.GetChild(0).gameObject;
         anim = GetComponentInChildren<Animator>();
         _patrolPositions = new List<Vector3>();
@@ -68,9 +72,10 @@ public class FatherController : MonoBehaviour
         _agent.SetDestination(_currentTarget);
         _agent.speed = 20f;
         Debug.Log("start");
-        anim.SetBool("walking", true);
+        //anim.SetBool("walking", true);
         source = GetComponent<AudioSource>();
         source.clip = slap;
+        SetIsHunting(true, player[0].transform.position);
         
     }
     
@@ -133,11 +138,13 @@ public class FatherController : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-
-        if (col.gameObject.tag == "Player")
-        {
+    
+        if (col.gameObject.tag == "Player" && _isHunting)
+        {Debug.Log("chuj");
             source.PlayOneShot(source.clip);
-            // DZIECKO KURWA BEC
+            anim.SetBool("running", false);
+            anim.SetBool("walking", false);
+            anim.SetBool("slap", true);
             isHuntingTimer = 10f;
             SetIsHunting(false, Vector3.zero);
         }
