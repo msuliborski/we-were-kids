@@ -17,7 +17,7 @@ public class FatherController : MonoBehaviour
     private bool _isHunting = false;
     [SerializeField]
     private bool _isWaiting = false;
-    [SerializeField] double isHuntingTimer = 10f;
+    [SerializeField] double isHuntingTimer = 30f;
 
     [SerializeField]
     bool isHitting = false;
@@ -42,7 +42,7 @@ public class FatherController : MonoBehaviour
         {
             _isHunting = true;
             _currentTarget = target;
-            _agent.speed = 100f;
+            _agent.speed = 200f;
             _agent.SetDestination(_currentTarget);
             anim.SetBool("walking", false);
             anim.SetBool("running", true);
@@ -50,10 +50,12 @@ public class FatherController : MonoBehaviour
         else
         {
             _isHunting = false;
+            isHitting = false;
             _currentTarget = RandomDest();
             _agent.SetDestination(_currentTarget);
             _agent.speed = 20f;
             anim.SetBool("running", false);
+            anim.SetBool("slap", false);
             anim.SetBool("walking", true);
         }
     }
@@ -64,7 +66,7 @@ public class FatherController : MonoBehaviour
         {
             _isHunting = true;
             _playerTarget = playerTarget;
-            _agent.speed = 100f;
+            _agent.speed = 200f;
             _agent.SetDestination(_playerTarget.transform.position);
             anim.SetBool("walking", false);
             anim.SetBool("slap", false);
@@ -73,6 +75,7 @@ public class FatherController : MonoBehaviour
         else
         {
             _isHunting = false;
+            isHitting = false;
             _currentTarget = RandomDest();
             _agent.SetDestination(_currentTarget);
             _agent.speed = 20f;
@@ -114,7 +117,7 @@ public class FatherController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (!_isHunting)
+        if (!_isHunting)
        {
            if (!_isWaiting)
           
@@ -150,7 +153,7 @@ public class FatherController : MonoBehaviour
                if (isHuntingTimer <= 0)
                {
                    SetIsHunting(false, Vector3.zero);
-                   isHuntingTimer = 10f;
+                   isHuntingTimer = 30f;
                }
            }
        }
@@ -168,7 +171,7 @@ public class FatherController : MonoBehaviour
         _patrolPositions.Add(_currentTarget);
         return random;
     }
-
+    
     private void OnTriggerEnter(Collider col)
     {
         
@@ -184,18 +187,33 @@ public class FatherController : MonoBehaviour
                 anim.SetBool("walking", false);
                 anim.SetBool("slap", true);
                 p.hp = 0;
-                isHuntingTimer = 10f;
+                isHuntingTimer = 30f;
                 isHitting = true;
                 StartCoroutine("animationReset");
+                
             }
         }
     }
 
-   IEnumerable animationReset()
+   IEnumerator animationReset()
     {
+        Debug.Log("eldo");
         yield return new WaitForSeconds(1.5f);
         SetIsHunting(false, Vector3.zero);
        
         
     }
+   
+   
+   void OnCollisionEnter (Collision collision) {
+
+
+       if (collision.gameObject.CompareTag("Bullet") ||
+           collision.gameObject.CompareTag("SuperBullet"))
+       {
+           SetIsHunting(true, collision.gameObject.GetComponent<Bullet>().owner);
+           Destroy (collision.gameObject);
+
+       }
+   }
 }
