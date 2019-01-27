@@ -12,20 +12,11 @@ public class SpriteToMesh : MonoBehaviour
     void Awake()
     {
         
-        SpriteToMeshFunc(GetComponent<SpriteRenderer>().sprite);
     }
 
     private void SpriteToMeshFunc(Sprite sprite)
     {
-        Mesh mesh = new Mesh
-        {
-            vertices = Array.ConvertAll(sprite.vertices, i => (Vector3)i),
-            uv = sprite.uv,
-            triangles = Array.ConvertAll(sprite.triangles, i => (int)i)
-        };
 
-        AssetDatabase.CreateAsset(mesh, "Assets/Meshes/kurwa.mesh");
-        AssetDatabase.SaveAssets();
         
     }
 }

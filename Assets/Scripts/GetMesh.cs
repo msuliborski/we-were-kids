@@ -6,9 +6,8 @@ public class GetMesh : MonoBehaviour
 {
     
     // Start is called before the first frame update
-    void Start()
-    {
-        GetComponent<MeshFilter>().mesh = (Mesh)AssetDatabase.LoadAssetAtPath("Assets/Meshes/kurwa.mesh", typeof(Mesh)); 
+    void Start() {
+        GetComponent<MeshFilter>().sharedMesh = GameObject.Find("GameObjectAdd").GetComponent<MeshFilter>().sharedMesh;
     }
 
     

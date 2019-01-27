@@ -7,9 +7,12 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private AudioSource source;
     [SerializeField] private AudioClip clip;
+
+    
     
     public void Play()
     {
+        
         SceneManager.LoadScene("michas");
     }
 
@@ -23,9 +26,10 @@ public class MainMenu : MonoBehaviour
         source.PlayOneShot(clip);
     }
     
-    public void Replay()
-    {
-        gameObject.SetActive(false);
+    public void Replay() {
+//        
+//        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
         SceneManager.LoadScene("michas");
     }
 }

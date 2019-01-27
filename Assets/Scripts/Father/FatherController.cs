@@ -33,6 +33,8 @@ public class FatherController : MonoBehaviour
 
     [SerializeField] private AudioClip slap;
     [SerializeField] private AudioClip kurla;
+
+    public GameObject winScreen;
     private AudioSource source;
 
     
@@ -88,6 +90,9 @@ public class FatherController : MonoBehaviour
     
     void Start()
     {
+        winScreen.SetActive(false);
+        
+        
         player = new[] {GameObject.Find("Player0").GetComponent<PlayerHandler>(), GameObject.Find("Player1").GetComponent<PlayerHandler>()};
         model = transform.GetChild(0).gameObject;
         anim = GetComponentInChildren<Animator>();
