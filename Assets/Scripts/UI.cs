@@ -32,7 +32,8 @@ public class UI : MonoBehaviour
         else
             p1.enabled = true;
         
-        p0.sprite = sprites[player0.hp];
-        p1.sprite = sprites[player1.hp];
+        p0.sprite = sprites[player0.hp + 1];
+        p1.sprite = sprites[player1.hp + 1];
+        Debug.Log(player0.hp+"\t"+player1.hp);
     }
 }
