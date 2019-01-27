@@ -22,8 +22,10 @@ public class Sniper : PickUp
                 source.PlayOneShot(source.clip);
                 play = false;
             }
+            Quaternion rot = Quaternion.Euler(owner.transform.GetChild(0).rotation.eulerAngles.x+180, owner.transform.GetChild(0).rotation.eulerAngles.y, 90);
+            
             transform.position = owner.transform.GetChild(0).position;
-            transform.rotation = owner.transform.GetChild(0).rotation;
+            transform.rotation = rot;
         }
         shootCooldown -= Time.deltaTime;
         if (shootCooldown < 0) shootCooldown = 0f;
