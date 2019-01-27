@@ -42,7 +42,7 @@ public class Sniper : PickUp
             Instantiate(projectile, pos1, ang1);
             shootCooldown = 2f;
             ammo -= 1;
-        } else {
+        } else if (ammo == 0) {
             source.clip = noAmmo;
             source.PlayOneShot(source.clip);
         }

@@ -53,7 +53,7 @@ public class Shotgun : PickUp
             Instantiate(projectile, pos5, ang5);
             shootCooldown = 1.2f;
             ammo -= 5;
-        } else {
+        } else if (ammo == 0) {
             source.clip = noAmmo;
             source.PlayOneShot(source.clip);
         }
