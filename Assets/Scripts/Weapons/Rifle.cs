@@ -10,10 +10,10 @@ public class Rifle : PickUp
     [SerializeField] private AudioClip noAmmo;
     private AudioSource source;
     public GameObject projectile;
-    public int ammo = 50;
     private bool play = true;
     void Start() {
         shootCooldown = 0.2f;
+        ammo = 50;
         source = GetComponent<AudioSource>();
     }
 

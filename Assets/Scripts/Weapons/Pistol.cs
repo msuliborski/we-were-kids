@@ -10,9 +10,9 @@ public class Pistol : PickUp
     private AudioSource source;
     public GameObject projectile;
     private bool play = true;
-    public int ammo = 20;
     void Start() {
         shootCooldown = 0.8f;
+        ammo = 20;
         source = GetComponent<AudioSource>();
     }
 

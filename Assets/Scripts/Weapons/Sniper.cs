@@ -10,9 +10,9 @@ public class Sniper : PickUp
     private AudioSource source;
     public GameObject projectile;
     private bool play = true;
-    public int ammo = 15;
     void Start() {
         shootCooldown = 2f;
+        ammo = 15;
         source = GetComponent<AudioSource>();
     }
 
