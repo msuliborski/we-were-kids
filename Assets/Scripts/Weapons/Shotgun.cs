@@ -58,7 +58,7 @@ public class Shotgun : PickUp
             temp5.GetComponent<Bullet>().owner = owner.GetComponent<PlayerHandler>().gameObject;
             shootCooldown = 1.2f;
             ammo -= 5;
-        } else if (ammo == 0) {
+        } else if (ammo == 0 && !source.isPlaying) {
             source.clip = noAmmo;
             source.PlayOneShot(source.clip);
         }

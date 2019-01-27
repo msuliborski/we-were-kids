@@ -109,13 +109,15 @@ public class PlayerHandler : MonoBehaviour {
 
         var rotationX = Input.GetAxis("RightHorizontal" + id);
         var rotationY = -Input.GetAxis("RightVertical" + id);
-        
-        
-        if (rotationX < 0 || rotationX > 0 || rotationY < 0 || rotationY > 0) {
-            var look = new Vector3(rotationX, 0, rotationY);
-            transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(look),0.3f);
-        } else {
-            _rigidbody.angularVelocity = Vector3.zero;
+
+        if (hp > 0) {
+            if (rotationX < 0 || rotationX > 0 || rotationY < 0 || rotationY > 0) {
+                var look = new Vector3(rotationX, 0, rotationY);
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(look), 0.3f);
+            }
+            else {
+                _rigidbody.angularVelocity = Vector3.zero;
+            }
         }
         #if UNITY_STANDALONE_WIN
         if (Input.GetAxis("FireW" + id) > 0.5) {

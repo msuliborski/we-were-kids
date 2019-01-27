@@ -44,7 +44,7 @@ public class Rifle : PickUp
             source.PlayOneShot(source.clip);
             shootCooldown = 0.2f;
             ammo -= 1;
-        } else if (ammo == 0) {
+        } else if (ammo == 0 && !source.isPlaying) {
             source.clip = noAmmo;
             source.PlayOneShot(source.clip);
         }
