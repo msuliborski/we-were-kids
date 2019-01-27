@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHandler : MonoBehaviour {
     [SerializeField] private int id;
@@ -69,7 +70,11 @@ public class PlayerHandler : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-       
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Menu");
+        }
         if (hp <= 0 && !died) {
             cooldown -= Time.deltaTime;
             if (doOnce) {
