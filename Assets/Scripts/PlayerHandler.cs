@@ -152,12 +152,13 @@ public class PlayerHandler : MonoBehaviour {
                 holdingWeapon = true;
                 rifleScript.isPickedUp = true;
                 //Destroy(gameObject);
+                if (col.GetComponent<Sniper>())
+                {
+                    col.GetComponent<Sniper>().LaserActivate();
+                }
             }
 
-            if (col.GetComponent<Sniper>())
-            {
-                col.GetComponent<Sniper>().LaserActivate();
-            }
+            
         }
     }
     
