@@ -17,7 +17,7 @@ public class FatherController : MonoBehaviour
     private bool _isHunting = false;
     [SerializeField]
     private bool _isWaiting = false;
-    [SerializeField] double isHuntingTimer = 30f;
+    [SerializeField] double isHuntingTimer = 45f;
 
     [SerializeField]
     bool isHitting = false;
@@ -153,7 +153,7 @@ public class FatherController : MonoBehaviour
                if (isHuntingTimer <= 0)
                {
                    SetIsHunting(false, Vector3.zero);
-                   isHuntingTimer = 30f;
+                   isHuntingTimer = 45f;
                }
            }
        }
@@ -187,7 +187,7 @@ public class FatherController : MonoBehaviour
                 anim.SetBool("walking", false);
                 anim.SetBool("slap", true);
                 p.hp = 0;
-                isHuntingTimer = 30f;
+                isHuntingTimer = 45f;
                 isHitting = true;
                 StartCoroutine("animationReset");
                 
