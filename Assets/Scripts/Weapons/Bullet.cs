@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private float vel;
+    public GameObject owner;
     // Start is called before the first frame update
     void Start()
     {

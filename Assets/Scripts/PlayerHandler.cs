@@ -10,6 +10,8 @@ public class PlayerHandler : MonoBehaviour {
     [SerializeField] private bool onIce = false;
     [SerializeField] private AudioClip ouch;
     [SerializeField] private AudioClip pickup;
+
+    private FatherController father;
    
 
     public GameObject spawnPoint;
@@ -34,8 +36,8 @@ public class PlayerHandler : MonoBehaviour {
     private Rigidbody _rigidbody;
 
     // Start is called before the first frame update
-    private void Start()
-    {
+    private void Start() {
+        father = GameObject.Find("Father").GetComponent<FatherController>();
         cooldown = 2.3f;
         collider = GetComponent<CapsuleCollider>();
         model = transform.GetChild(1);
@@ -137,6 +139,8 @@ public class PlayerHandler : MonoBehaviour {
             source.PlayOneShot(source.clip);
             Destroy (collision.gameObject);
             hp -= 1;
+            if (hp < 0) hp = 0;
+            father.SetIsHunting(true, collision.gameObject.GetComponent<Bullet>().owner);
         }        
         if (collision.gameObject.CompareTag("SuperBullet")){
             source.clip = ouch;
@@ -144,6 +148,7 @@ public class PlayerHandler : MonoBehaviour {
             Destroy (collision.gameObject);
             hp -= 5;
             if (hp < 0) hp = 0;
+            father.SetIsHunting(true, collision.gameObject.GetComponent<Bullet>().owner);
         }
     }
 

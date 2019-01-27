@@ -39,7 +39,8 @@ public class Sniper : PickUp
             var pos1 = new Vector3(owner.transform.GetChild(0).gameObject.transform.position.x, owner.transform.GetChild(0).gameObject.transform.position.y-4, owner.transform.GetChild(0).gameObject.transform.position.z);
             source.clip = shot;
             source.PlayOneShot(source.clip);
-            Instantiate(projectile, pos1, ang1);
+            Instantiate(projectile, pos1, ang1, gameObject.transform);
+            transform.GetChild(transform.childCount - 1).GetComponent<Bullet>().owner = owner.GetComponent<PlayerHandler>().gameObject;
             shootCooldown = 2f;
             ammo -= 1;
         } else if (ammo == 0) {
