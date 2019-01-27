@@ -12,12 +12,13 @@ public class FatherController : MonoBehaviour
     private bool _isHunting = false;
     [SerializeField]
     private bool _isWaiting = false;
-    [SerializeField]
+    [SerializeField] double isHuntingTimer = 10f;
+   
     private List<Vector3> _patrolPositions;
     private float _isWaitingTimer = 1.5f;
 
     private Animator anim;
-    
+    private GameObject model;
     
     public static int player0Score = 0;
     public static int player1Score = 0;
@@ -32,15 +33,19 @@ public class FatherController : MonoBehaviour
         {
             _isHunting = true;
             _currentTarget = target;
-            _agent.speed = 9f;
+            _agent.speed = 40f;
             _agent.SetDestination(_currentTarget);
+            anim.SetBool("walking", false);
+            anim.SetBool("running", true);
         }
         else
         {
             _isHunting = false;
             _currentTarget = RandomDest();
             _agent.SetDestination(_currentTarget);
-            _agent.speed = 2f;
+            _agent.speed = 20f;
+            anim.SetBool("running", false);
+            anim.SetBool("walking", true);
         }
     }
     
@@ -48,6 +53,7 @@ public class FatherController : MonoBehaviour
     void Start()
     {
 
+        model = transform.GetChild(0).gameObject;
         anim = GetComponentInChildren<Animator>();
         _patrolPositions = new List<Vector3>();
         GameObject points = GameObject.Find("PatrolPoints");
@@ -60,11 +66,12 @@ public class FatherController : MonoBehaviour
         _currentTarget = _patrolPositions[0];
         _agent = GetComponent<NavMeshAgent>();
         _agent.SetDestination(_currentTarget);
-        _agent.speed = 30f;
+        _agent.speed = 20f;
         Debug.Log("start");
-        anim.SetBool("running", true);
+        anim.SetBool("walking", true);
         source = GetComponent<AudioSource>();
         source.clip = slap;
+        
     }
     
     
@@ -72,8 +79,8 @@ public class FatherController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // if (!_isHunting)
-       // {
+       if (!_isHunting)
+       {
            if (!_isWaiting)
           
             {
@@ -81,7 +88,7 @@ public class FatherController : MonoBehaviour
                 {
                     //_agent.Stop();
                     _isWaiting = true;
-                    anim.SetBool("running", false);
+                    anim.SetBool("walking", false);
                 }
             }
             else
@@ -92,29 +99,28 @@ public class FatherController : MonoBehaviour
                 {
                     Debug.Log(_isWaitingTimer);
                    _isWaiting = false;
-                   anim.SetBool("running", true);
+                   anim.SetBool("walking", true);
                    _isWaitingTimer = 1.5f;
                    _currentTarget = RandomDest();
                    _agent.SetDestination(_currentTarget);
                    
                 }
             }
-       // }
-       // else
-       // {
-           /* if (Mathf.Approximately(transform.position.x, _currentTarget.x) && Mathf.Approximately(transform.position.z, _currentTarget.z))
-                         {
-                             Debug.Log("kureaaaa");
-                             SetIsHunting(false, Vector3.zero);
-                             
-                             _isWaiting = false;
-                         }*/
-       // }
+       }
+       else
+       {
+           isHuntingTimer -= Time.deltaTime;
+           if (isHuntingTimer <= 0)
+           {
+               SetIsHunting(false, Vector3.zero);
+               isHuntingTimer = 10f;
+           }
+       }
        
        
-       //transform.position = new Vector3(transform.position.x, 10.23f, transform.position.z);
+       model.transform.position = new Vector3(transform.position.x, -0.36f, transform.position.z);
     }
-    
+      
     
     Vector3 RandomDest()
     {
@@ -128,9 +134,14 @@ public class FatherController : MonoBehaviour
     private void OnTriggerEnter(Collider col)
     {
 
-        if (col.gameObject.tag == "children")
+        if (col.gameObject.tag == "Player")
         {
             source.PlayOneShot(source.clip);
+            // DZIECKO KURWA BEC
+            isHuntingTimer = 10f;
+            SetIsHunting(false, Vector3.zero);
         }
     }
+    
+   
 }

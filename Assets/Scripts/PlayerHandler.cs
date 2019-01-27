@@ -28,7 +28,8 @@ public class PlayerHandler : MonoBehaviour {
     public PickUp grenade;
     
     public int hp = 100;
-
+    
+    
     private GameObject inst;
     private Rigidbody _rigidbody;
 
