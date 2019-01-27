@@ -110,6 +110,9 @@ public class FatherController : MonoBehaviour
                              _isWaiting = false;
                          }*/
        // }
+       
+       
+       //transform.position = new Vector3(transform.position.x, 10.23f, transform.position.z);
     }
     
     

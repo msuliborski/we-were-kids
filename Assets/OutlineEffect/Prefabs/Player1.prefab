@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 9187267534100835488}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -43.6, y: 6.7, z: -16.099998}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children:
   - {fileID: 9187267534571895057}
   - {fileID: 222439295501073840}
@@ -135,6 +135,7 @@ MonoBehaviour:
   holdingWeapon: 0
   weapon: {fileID: 0}
   grenade: {fileID: 0}
+  hp: 100
 --- !u!82 &5148397298800002826
 AudioSource:
   m_ObjectHideFlags: 0

@@ -4,28 +4,32 @@ using UnityEngine;
 
 public class PlayerOutline : MonoBehaviour
 {
-    private MeshRenderer renderer;
-    [SerializeField] private Shader a;
-    [SerializeField] private Shader b;
-
-
+    [SerializeField] private List<Outline> outlines;
+    
     void Start()
     {
-        renderer = GetComponent<MeshRenderer>();
-    }
+        for (int i = 0; i < transform.GetChild(1).childCount; i++)
+        {
+            Transform child = transform.GetChild(1).GetChild(i);
+            if (child.GetComponent<SkinnedMeshRenderer>() != null)
+                outlines.Add(child.GetComponent<Outline>());
+        }
+       }
   
 
     private void OnTriggerStay(Collider col)
     {
         if (col.gameObject.CompareTag("Wall"))
         {
-            renderer.material.shader = b;
+            foreach (var outline in outlines)
+                outline.enabled = true;
         }
     }
 
     private void OnTriggerExit(Collider col)
     {
         if (col.gameObject.CompareTag("Wall"))
-            renderer.material.shader = a;
+            foreach (var outline in outlines)
+                outline.enabled = false;
     }
 }
