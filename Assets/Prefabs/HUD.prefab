@@ -117,7 +117,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8314547168240682982}
-        m_MethodName: Play
+        m_MethodName: Replay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -454,7 +454,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397947b013b04ffa8b6146a93c3b9f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPoints: 0
+  maxPoints: 5
+  win: {fileID: 4624730431606721350}
 --- !u!1 &4054576479868797756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1866,7 +1867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6666667}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9019608}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

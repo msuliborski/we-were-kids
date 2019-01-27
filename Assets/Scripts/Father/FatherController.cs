@@ -186,12 +186,12 @@ public class FatherController : MonoBehaviour
                 p.hp = 0;
                 isHuntingTimer = 10f;
                 isHitting = true;
-
+                StartCoroutine("animationReset");
             }
         }
     }
 
-    IEnumerable animationReset()
+   IEnumerable animationReset()
     {
         yield return new WaitForSeconds(1.5f);
         SetIsHunting(false, Vector3.zero);

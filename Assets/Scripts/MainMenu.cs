@@ -22,4 +22,10 @@ public class MainMenu : MonoBehaviour
     {
         source.PlayOneShot(clip);
     }
+    
+    public void Replay()
+    {
+        gameObject.SetActive(false);
+        SceneManager.LoadScene("michas");
+    }
 }
