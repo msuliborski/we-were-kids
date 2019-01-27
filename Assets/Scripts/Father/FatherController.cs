@@ -10,13 +10,18 @@ public class FatherController : MonoBehaviour
     
     [SerializeField]
     private Vector3 _currentTarget;
+
+    private GameObject _playerTarget;
     private NavMeshAgent _agent;
     [SerializeField]
     private bool _isHunting = false;
     [SerializeField]
     private bool _isWaiting = false;
     [SerializeField] double isHuntingTimer = 10f;
-   
+
+    [SerializeField]
+    bool isHitting = false;
+    
     private List<Vector3> _patrolPositions;
     private float _isWaitingTimer = 1.5f;
 
@@ -37,7 +42,7 @@ public class FatherController : MonoBehaviour
         {
             _isHunting = true;
             _currentTarget = target;
-            _agent.speed = 40f;
+            _agent.speed = 100f;
             _agent.SetDestination(_currentTarget);
             anim.SetBool("walking", false);
             anim.SetBool("running", true);
@@ -48,6 +53,30 @@ public class FatherController : MonoBehaviour
             _currentTarget = RandomDest();
             _agent.SetDestination(_currentTarget);
             _agent.speed = 20f;
+            anim.SetBool("running", false);
+            anim.SetBool("walking", true);
+        }
+    }
+
+    public void SetIsHunting(bool isHunting, GameObject playerTarget)
+    {
+        if (isHunting)
+        {
+            _isHunting = true;
+            _playerTarget = playerTarget;
+            _agent.speed = 100f;
+            _agent.SetDestination(_playerTarget.transform.position);
+            anim.SetBool("walking", false);
+            anim.SetBool("slap", false);
+            anim.SetBool("running", true);
+        }
+        else
+        {
+            _isHunting = false;
+            _currentTarget = RandomDest();
+            _agent.SetDestination(_currentTarget);
+            _agent.speed = 20f;
+            anim.SetBool("slap", false);
             anim.SetBool("running", false);
             anim.SetBool("walking", true);
         }
@@ -72,10 +101,11 @@ public class FatherController : MonoBehaviour
         _agent.SetDestination(_currentTarget);
         _agent.speed = 20f;
         Debug.Log("start");
-        //anim.SetBool("walking", true);
+        
+        anim.SetBool("walking", true);
         source = GetComponent<AudioSource>();
         source.clip = slap;
-        SetIsHunting(true, player[0].transform.position);
+        //SetIsHunting(true, player[0].transform.position);
         
     }
     
@@ -108,17 +138,20 @@ public class FatherController : MonoBehaviour
                    _isWaitingTimer = 1.5f;
                    _currentTarget = RandomDest();
                    _agent.SetDestination(_currentTarget);
-                   
                 }
             }
        }
        else
        {
-           isHuntingTimer -= Time.deltaTime;
-           if (isHuntingTimer <= 0)
+           if (!isHitting)
            {
-               SetIsHunting(false, Vector3.zero);
-               isHuntingTimer = 10f;
+               _agent.SetDestination(_playerTarget.transform.position);
+               isHuntingTimer -= Time.deltaTime;
+               if (isHuntingTimer <= 0)
+               {
+                   SetIsHunting(false, Vector3.zero);
+                   isHuntingTimer = 10f;
+               }
            }
        }
        
@@ -138,17 +171,31 @@ public class FatherController : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-    
+        
         if (col.gameObject.tag == "Player" && _isHunting)
-        {Debug.Log("chuj");
-            source.PlayOneShot(source.clip);
-            anim.SetBool("running", false);
-            anim.SetBool("walking", false);
-            anim.SetBool("slap", true);
-            isHuntingTimer = 10f;
-            SetIsHunting(false, Vector3.zero);
+        {Debug.Log("Kurwa");
+            PlayerHandler p = col.gameObject.GetComponent<PlayerHandler>();
+            Debug.Log(_playerTarget.gameObject.name);
+            if (p.gameObject == _playerTarget.gameObject)
+            {
+                Debug.Log("chuj");
+                source.PlayOneShot(source.clip);
+                anim.SetBool("running", false);
+                anim.SetBool("walking", false);
+                anim.SetBool("slap", true);
+                p.hp = 0;
+                isHuntingTimer = 10f;
+                isHitting = true;
+
+            }
         }
     }
-    
-   
+
+    IEnumerable animationReset()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SetIsHunting(false, Vector3.zero);
+       
+        
+    }
 }
