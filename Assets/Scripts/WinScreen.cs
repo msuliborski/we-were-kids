@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Net.Mime;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class WinScreen : MonoBehaviour
@@ -30,8 +31,7 @@ public class WinScreen : MonoBehaviour
             {
                 win.GetComponent<RectTransform>().sizeDelta = new Vector2(win.GetComponent<RectTransform>().sizeDelta.x*3/4, win.GetComponent<RectTransform>().sizeDelta.y/2);
             }
-            win.SetActive(true);tton
-                
+            win.SetActive(true);
         }
     }
 }
