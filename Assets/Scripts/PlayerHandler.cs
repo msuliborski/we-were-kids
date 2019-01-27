@@ -26,6 +26,7 @@ public class PlayerHandler : MonoBehaviour {
     public PickUp weapon = null;
     public PickUp grenade;
     
+
     public int hp = 10;
     public float cooldown = 5;
 
