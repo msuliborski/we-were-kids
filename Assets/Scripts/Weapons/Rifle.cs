@@ -17,14 +17,17 @@ public class Rifle : PickUp
 
     // Update is called once per frame
     void Update() {
-        if (isPickedUp) {
+        if (isPickedUp)
+        {
+            Quaternion rot = Quaternion.Euler(owner.transform.GetChild(0).rotation.eulerAngles.x, owner.transform.GetChild(0).rotation.eulerAngles.y, 125);
+            
             if (play)
             {
                 source.PlayOneShot(source.clip);
                 play = false;
             }
             transform.position = owner.transform.GetChild(0).position;
-            transform.rotation = owner.transform.GetChild(0).rotation;
+            transform.rotation = rot;
         }
         shootCooldown -= Time.deltaTime;
         if (shootCooldown < 0) shootCooldown = 0f;

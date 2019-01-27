@@ -22,8 +22,9 @@ public class Shotgun : PickUp
                 source.PlayOneShot(source.clip);
                 play = false;
             }
+            Quaternion rot = Quaternion.Euler(owner.transform.GetChild(0).rotation.eulerAngles.x, owner.transform.GetChild(0).rotation.eulerAngles.y+90, owner.transform.GetChild(0).rotation.eulerAngles.z);
             transform.position = owner.transform.GetChild(0).position;
-            transform.rotation = owner.transform.GetChild(0).rotation;
+            transform.rotation = rot;
         }
         shootCooldown -= Time.deltaTime;
         if (shootCooldown < 0) shootCooldown = 0f;
