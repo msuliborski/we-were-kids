@@ -9,6 +9,7 @@ public abstract class PickUp : MonoBehaviour
     public bool isPickedUp = false;
     public GameObject owner;
     public float shootCooldown;
+    public int ammo;
     
     void Start()
     {
