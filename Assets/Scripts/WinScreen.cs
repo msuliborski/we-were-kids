@@ -10,13 +10,12 @@ public class WinScreen : MonoBehaviour
     [SerializeField] private int maxPoints;
     private Camera cam0;
     private Camera cam1;
-    private GameObject win;
+    [SerializeField] private GameObject win;
 
     void Start()
     {
         cam0 = GameObject.Find("Camera0").GetComponent<Camera>();
         cam1 = GameObject.Find("Camera1").GetComponent<Camera>();
-        win =  GameObject.Find("Win");
     }
     
     void Update()
