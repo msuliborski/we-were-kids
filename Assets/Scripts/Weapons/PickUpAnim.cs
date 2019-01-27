@@ -26,7 +26,7 @@ public class PickUpAnim : MonoBehaviour
             else if (transform.localScale.x < min)
                 grow = false;
         
-            transform.Rotate(Vector3.up, ang);
+            transform.Rotate(transform.up, ang);
         
             if (!grow)
             {
