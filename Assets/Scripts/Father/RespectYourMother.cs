@@ -8,11 +8,12 @@ public class RespectYourMother : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-
+Debug.Log("awdawda");
 
         if (collision.gameObject.CompareTag("Bullet") ||
             collision.gameObject.CompareTag("SuperBullet"))
         {
+            
             father.SetIsHunting(true, collision.gameObject.GetComponent<Bullet>().owner);
             Destroy (collision.gameObject);
         }
