@@ -9,10 +9,10 @@ public class UI : MonoBehaviour
 {
     [SerializeField] private List<Sprite> sprites;
     private Image p0;
-    private TextMeshPro p0points;
-    private TextMeshPro p0bullets;
-    private TextMeshPro p1points;
-    private TextMeshPro p1bullets;
+    public TextMeshProUGUI p0points;
+    public TextMeshProUGUI p0bullets;
+    public TextMeshProUGUI p1points;
+    public TextMeshProUGUI p1bullets;
     private Image p1;
     private PlayerHandler player0;
     private PlayerHandler player1;
@@ -23,10 +23,10 @@ public class UI : MonoBehaviour
         player1 = GameObject.Find("Player1").GetComponent<PlayerHandler>();
         p0 = transform.GetChild(0).GetComponent<Image>();
         p1 = transform.GetChild(1).GetComponent<Image>();
-        p0points = transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<TextMeshPro>();
-        p0bullets = transform.GetChild(0).GetChild(1).GetChild(0).GetComponent<TextMeshPro>();
-        p1points = transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<TextMeshPro>();
-        p1bullets = transform.GetChild(1).GetChild(1).GetChild(0).GetComponent<TextMeshPro>();
+        p0points = transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
+        p0bullets = transform.GetChild(0).GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>();
+        p1points = transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
+        p1bullets = transform.GetChild(1).GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>();
     }
 
     void Update()
@@ -55,9 +55,17 @@ public class UI : MonoBehaviour
 
         p0points.text = FatherController.player0Score.ToString();
         p1points.text = FatherController.player1Score.ToString();
+
+        if (player0.weapon == null)
+            p0bullets.text = "0";
+        else
+            p0bullets.text = player0.weapon.ammo.ToString();
+
+        if (player1.weapon == null)
+            p1bullets.text = "0";
+        else
+            p1bullets.text = player1.weapon.ammo.ToString();
         
-//        p0bullets = player0.weapon.
-        
-        Debug.Log(player0.hp+"\t"+player1.hp);
+//        Debug.Log(player0.hp+"\t"+player1.hp);
     }
 }
