@@ -19,8 +19,8 @@ public class PlayerHandler : MonoBehaviour {
     private Transform model;
     
     private AudioSource source;
-    
-    
+    private Animator anim;
+    private CapsuleCollider collider;
     
     public bool holdingWeapon = false;
     
@@ -35,7 +35,10 @@ public class PlayerHandler : MonoBehaviour {
     // Start is called before the first frame update
     private void Start()
     {
+        
+        collider = GetComponent<CapsuleCollider>();
         model = transform.GetChild(1);
+        anim = model.GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody>();
         inst = transform.GetChild(0).gameObject;
         source = GetComponent<AudioSource>();
@@ -52,7 +55,7 @@ public class PlayerHandler : MonoBehaviour {
                 doOnce = false;
                 if (id == 1) FatherController.player0Score++;
                 else FatherController.player1Score++; //give points (father holds 'em)
-                GetComponent<CapsuleCollider>().isTrigger = true;
+                collider.isTrigger = true;
                 transform.GetChild(1).gameObject.SetActive(false);
                 Destroy(weapon.gameObject);
             }
@@ -63,7 +66,7 @@ public class PlayerHandler : MonoBehaviour {
                 hp = 100;
                 transform.position = new Vector3(spawnPoint.transform.position.x, transform.position.y, spawnPoint.transform.position.z);
                 cooldown = 5;
-                GetComponent<CapsuleCollider>().isTrigger = false;
+                collider.isTrigger = false;
                 doOnce = true;
                 transform.GetChild(1).gameObject.SetActive(true);
             }
@@ -84,9 +87,9 @@ public class PlayerHandler : MonoBehaviour {
         }
         
         if(Math.Abs(_rigidbody.velocity.magnitude) > 0.1)
-            model.GetComponent<Animator>().SetBool("running", true);
+            anim.SetBool("running", true);
         else
-            model.GetComponent<Animator>().SetBool("running", false);
+            anim.SetBool("running", false);
         
 
         var rotationX = Input.GetAxis("RightHorizontal" + id);
@@ -149,6 +152,11 @@ public class PlayerHandler : MonoBehaviour {
                 holdingWeapon = true;
                 rifleScript.isPickedUp = true;
                 //Destroy(gameObject);
+            }
+
+            if (col.GetComponent<Sniper>())
+            {
+                //col.GetComponent<Sniper>().LaserActivate();
             }
         }
     }
