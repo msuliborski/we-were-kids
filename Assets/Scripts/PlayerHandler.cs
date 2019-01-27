@@ -26,7 +26,7 @@ public class PlayerHandler : MonoBehaviour {
     public PickUp weapon = null;
     public PickUp grenade;
     
-    public int hp = 100;
+    public int hp = 10;
     public float cooldown = 5;
 
     private GameObject inst;
@@ -56,7 +56,7 @@ public class PlayerHandler : MonoBehaviour {
     }
     public void respawnAfterCooldown() {
         died = false;
-        hp = 100;
+        hp = 10;
         transform.position = new Vector3(spawnPoint.transform.position.x, transform.position.y, spawnPoint.transform.position.z);
         cooldown = 5;
         collider.isTrigger = false;
@@ -132,13 +132,13 @@ public class PlayerHandler : MonoBehaviour {
             source.clip = ouch;
             source.PlayOneShot(source.clip);
             Destroy (collision.gameObject);
-            hp -= 10;
+            hp -= 1;
         }        
         if (collision.gameObject.CompareTag("SuperBullet")){
             source.clip = ouch;
             source.PlayOneShot(source.clip);
             Destroy (collision.gameObject);
-            hp -= 50;
+            hp -= 5;
         }
     }
 
