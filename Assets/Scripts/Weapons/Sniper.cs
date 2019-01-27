@@ -39,5 +39,15 @@ public class Sniper : PickUp
             shootCooldown = 2f;
         }
     }
+
+    public void LaserActivate()
+    {
+        transform.GetChild(1).gameObject.SetActive(true);
+    }
+
+    public void LaserDectivate()
+    {
+        transform.GetChild(1).gameObject.SetActive(false);
+    }
     
 }
