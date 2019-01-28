@@ -11,6 +11,7 @@ public class PlayerHandler : MonoBehaviour {
     [SerializeField] private bool onIce = false;
     [SerializeField] private AudioClip ouch;
     [SerializeField] private AudioClip pickup;
+    [SerializeField] private float ang = 5;
 
     private FatherController father;
    
@@ -28,7 +29,7 @@ public class PlayerHandler : MonoBehaviour {
     
     public PickUp weapon = null;
     public PickUp grenade;
-    
+    public Vector3 dir;
 
     public int hp = 10;
     public float cooldown = 5;
@@ -87,9 +88,48 @@ public class PlayerHandler : MonoBehaviour {
             }
         }
         
-        var dir = Vector3.zero;
+        dir = Vector3.zero;
         dir.x = Input.GetAxis("LeftVertical" + id);
         dir.z = Input.GetAxis("LeftHorizontal" + id);
+        
+        var rotationX = Input.GetAxis("RightHorizontal" + id);
+        var rotationY = -Input.GetAxis("RightVertical" + id);
+        
+        
+        if (id == 0)
+        {
+            if (Input.GetKey(KeyCode.W))
+                dir.x = -1;
+            if (Input.GetKey(KeyCode.S))
+                dir.x = 1;
+            if (Input.GetKey(KeyCode.A))
+                dir.z = -1;
+            if (Input.GetKey(KeyCode.D))
+                dir.z = 1;
+            if (Input.GetKey(KeyCode.C))
+                transform.Rotate(Vector3.up, -ang);
+            if (Input.GetKey(KeyCode.B))
+                transform.Rotate(Vector3.up, ang);
+            if (Input.GetKey(KeyCode.V))
+                if (weapon) weapon.Fire();
+        }
+        else if (id == 1)
+        {
+            if (Input.GetKey(KeyCode.I))
+                dir.x = -1;
+            if (Input.GetKey(KeyCode.K))
+                dir.x = 1;
+            if (Input.GetKey(KeyCode.J))
+                dir.z = -1;
+            if (Input.GetKey(KeyCode.L))
+                dir.z = 1;
+            if (Input.GetKey(KeyCode.Comma))
+                transform.Rotate(Vector3.up, -ang);
+            if (Input.GetKey(KeyCode.Slash))
+                transform.Rotate(Vector3.up, ang);
+            if (Input.GetKey(KeyCode.Period))
+                if (weapon) weapon.Fire();
+        }
         
         if (dir.x < 0 || dir.x > 0 || dir.z < 0 || dir.z > 0) {
             var look = new Vector3(dir.x, 0, dir.z);
@@ -106,9 +146,6 @@ public class PlayerHandler : MonoBehaviour {
         else
             anim.SetBool("running", false);
         
-
-        var rotationX = Input.GetAxis("RightHorizontal" + id);
-        var rotationY = -Input.GetAxis("RightVertical" + id);
 
         if (hp > 0) {
             if (rotationX < 0 || rotationX > 0 || rotationY < 0 || rotationY > 0) {
