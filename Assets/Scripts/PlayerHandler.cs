@@ -11,7 +11,7 @@ public class PlayerHandler : MonoBehaviour {
     [SerializeField] private bool onIce = false;
     [SerializeField] private AudioClip ouch;
     [SerializeField] private AudioClip pickup;
-    [SerializeField] private float ang = 5;
+    [SerializeField] private float ang;
 
     private FatherController father;
    
@@ -38,7 +38,9 @@ public class PlayerHandler : MonoBehaviour {
     private Rigidbody _rigidbody;
 
     // Start is called before the first frame update
-    private void Start() {
+    private void Start()
+    {
+        ang = 5;
         father = GameObject.Find("Father").GetComponent<FatherController>();
         cooldown = 2.3f;
         collider = GetComponent<CapsuleCollider>();
