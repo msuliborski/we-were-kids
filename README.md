@@ -1,11 +1,11 @@
-# We Were Kids
+﻿# We Were Kids
 
 3D war game seen by kids imagination. Global Game Jam 6 (2019).<br/>
 
 <p align="center">
-  <img width="940" src="Assets/screens/1.png">
-  <img width="940" src="Assets/screens/2.png">
-  <img width="940" src="Assets/screens/3.png">
+  <img width="940" src="Screens/1.png">
+  <img width="940" src="Screens/2.png">
+  <img width="940" src="Screens/3.png">
 </p>
 
 
