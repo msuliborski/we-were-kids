@@ -7,7 +7,7 @@
   <img width="840" src="Screens/3.png">
 </p>
 
-## Download
+### Download
 All releases of the game are avaliable on the github page in the [releases](https://github.com/msuliborski/we-were-kids/releases) tab. 
 
 ## Getting Started
