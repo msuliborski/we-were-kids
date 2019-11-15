@@ -2,13 +2,13 @@
 3D war game seen by kids imagination. Global Game Jam 6 (2019).
 <br/>
 <p align="center">
-  <img width="940" src="Screens/1.png">
-  <img width="940" src="Screens/2.png">
-  <img width="940" src="Screens/3.png">
+  <img width="840" src="Screens/1.png">
+  <img width="840" src="Screens/2.png">
+  <img width="840" src="Screens/3.png">
 </p>
 
 ## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
 ### Cloning
 ```
