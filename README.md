@@ -2,9 +2,9 @@
 3D war game seen by kids imagination. Global Game Jam 6 (2019).
 <br/>
 <p align="center">
-  <img width="840" src="Screens/1.png">
-  <img width="840" src="Screens/2.png">
-  <img width="840" src="Screens/3.png">
+  <img width="840" src="Screens/1.png"/>
+  <img width="840" src="Screens/2.png"/>
+  <img width="840" src="Screens/3.png"/>
 </p>
 
 ### Download
